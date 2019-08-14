@@ -1,0 +1,45 @@
+/* This is a compiled file, you should be editing the file in the templates directory */
+body.pace-running{
+  overflow: hidden;
+}
+.pace {
+  transition: all ease 300ms;
+}
+.pace.pace-active{
+  position: fixed;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  z-index: 1031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+}
+
+.pace.pace-inactive .pace-progress {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+
+}
+
+.pace .pace-progress {
+  z-index: 2000;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.pace .pace-progress:after {
+  display: block;
+  content: attr(data-progress-text);
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.19999999999999996);
+}
