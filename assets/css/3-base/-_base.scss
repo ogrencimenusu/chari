@@ -96,8 +96,6 @@ a{
 header{
   .navbar{
     align-items: flex-start;
-    padding-bottom: 0;
-    padding-top: 0;
     .navbar-brand{
       font-size: 30px;
       font-weight: bold;
@@ -120,132 +118,109 @@ header{
       &.show, &.collapsing{
         background: rgba($white,.95);
       }
-      ul.navbar-nav{
-        &.menu{
-          @include md{
-            margin-top: 10px;
-            text-align: center;
-          }
-          @include sm{
-            margin-top: 10px;
-            text-align: center;
-          }
-          @include esm{
-            margin-top: 10px;
-            text-align: center;
-          }
-          li.nav-item{
-            @include transition(all ease 300ms);
-            .nav-link{
-              font-size: 16px;
-              font-weight: 500;
-              padding-right: 25px;
-              padding-left: 25px;
-              @include transition(all ease 300ms);
-              @include md{
-                padding: 0;
-                margin: 0;
-                padding-bottom: 10px;
-              }
-            }
-            &.active{
-              a.nav-link{
-                color: $primary;
-                font-weight: bold;
-              }
-            }
-          }
+      ul.menu{
+        @include md{
+          margin-top: 10px;
+          text-align: center;
         }
-        &.menu-right{
-          @include md{
-            justify-content: center;
-            flex-direction: row;
-          }
-          @include sm{
-            justify-content: center;
-            flex-direction: row;
-          }
-          @include esm{
-            justify-content: center;
-            flex-direction: row;
-          }
-          li.nav-item{
-            @include md{
-              position: unset;
-            }
-            @include sm{
-              position: unset;
-            }
-            @include esm{
-              position: unset;
-            }
-            .nav-link{
-              position: relative;
-              @include md{
-                position: unset;
-                margin: 0px 15px;
-              }
-              @include sm{
-                position: unset;
-                margin: 0px 15px;
-              }
-              @include esm{
-                position: unset;
-                margin: 0px 15px;
-              }
-              i{
-                font-style: unset;
-                font-size: 22px;
-                position: relative;
-                .badges{
-                  color: color(white);
-                  background: $primary;
-                  position: absolute;
-                  font-size: 12px;
-                  width: 20px;
-                  height: 20px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  @include border-radius(10px);
-                  top: -7px;
-                  right: -8px;
-                }
-
-              }
-            }
-          }
+        @include sm{
+          margin-top: 10px;
+          text-align: center;
+        }
+        @include esm{
+          margin-top: 10px;
+          text-align: center;
         }
         li.nav-item{
-          cursor: pointer;
-          position: relative;
-          .nav-link{
-            padding-bottom: 20px;
-            padding-top: 20px;
+          @include transition(all ease 300ms);
+          a.nav-link{
+            font-size: 16px;
+            font-weight: 500;
+            padding-right: 25px;
+            padding-left: 25px;
+            @include transition(all ease 300ms);
             @include md{
-              padding-bottom: 5px;
-              padding-top: 5px;
-            }
-            @include sm{
-              padding-bottom: 5px;
-              padding-top: 5px;
-            }
-            @include esm{
-              padding-bottom: 5px;
-              padding-top: 5px;
+              padding: 0;
+              margin: 0;
+              padding-bottom: 10px;
             }
           }
+          &.active{
+            a.nav-link{
+              color: $primary;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      ul.navbar-nav.menu-right{
+        @include md{
+          justify-content: center;
+          flex-direction: row;
+        }
+        @include sm{
+          justify-content: center;
+          flex-direction: row;
+        }
+        @include esm{
+          justify-content: center;
+          flex-direction: row;
+        }
+        li.nav-item{
+          position: relative;
+          @include md{
+            position: unset;
+          }
+          @include sm{
+            position: unset;
+          }
+          @include esm{
+            position: unset;
+          }
+          .nav-link{
+            position: relative;
+            @include md{
+              position: unset;
+              margin: 0px 15px;
+            }
+            @include sm{
+              position: unset;
+              margin: 0px 15px;
+            }
+            @include esm{
+              position: unset;
+              margin: 0px 15px;
+            }
+            i{
+              font-style: unset;
+              font-size: 22px;
+              position: relative;
+              .badges{
+                color: color(white);
+                background: $primary;
+                position: absolute;
+                font-size: 12px;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include border-radius(10px);
+                top: -7px;
+                right: -8px;
+              }
+
+            }
+
+          }
           .custom-dropdown-menu{
-            text-align: left;
-            z-index: 1;
-            top: 54px;
             visibility: hidden;
             display: unset;
             opacity: 0;
             @include transition(all ease 300ms);
-            width: 200px;
+            width: 300px;
             position: absolute;
-            left: calc(50% - 100px);
+            left: calc(50% - 195px);
             background: $white;
             padding: 20px;
             @include border-radius(5px);
@@ -257,7 +232,7 @@ header{
               left: 0;
               width: calc(100% - 48px);
               top: unset;
-              margin-top: -5px;
+              margin-top: -3px;
               margin-left: 24px;
               border-radius: 0;
             }
@@ -266,7 +241,7 @@ header{
               left: 0;
               width: calc(100% - 36px);
               top: unset;
-              margin-top: -5px;
+              margin-top: -3px;
               margin-left: 18px;
               border-radius: 0;
             }
@@ -275,15 +250,11 @@ header{
               left: 0;
               width: calc(100% - 32px);
               top: unset;
-              margin-top: -5px;
+              margin-top: -3px;
               margin-left: 16px;
               border-radius: 0;
               max-height: 220px;
-              overflow: auto;
-            }
-            &.dropdown-cart{
-              width: 300px;
-              left: calc(50% - 150px);
+              overflow: scroll;
             }
             &:before{
               content: '';
@@ -294,7 +265,7 @@ header{
               background: $white;
               position: absolute;
               top: -6px;
-              left: calc(50% - 6px);
+              left: calc(50% - 37px);
               @include lg{
                 display: none;
               }
@@ -308,13 +279,9 @@ header{
                 @include border-radius(0px 4px 4px 0px);
               }
             }
-            hr{
-              margin:5px 0px 0px 0px;
-            }
             .list-item{
               display: block;
               text-decoration: none;
-              margin-top: 15px;
               &:hover{
                 color: $secondary;
               }
@@ -338,7 +305,7 @@ header{
               }
             }
             .item-wrap{
-              overflow-y: auto;
+              overflow-y: scroll;
 
               .media{
                 margin-bottom: 10px;
@@ -410,57 +377,67 @@ header{
               visibility: visible;
               @include md{
                 display: unset;
-                width: calc(100% - 32px);
-                left: 0;
               }
               @include sm{
-                width: calc(100% - 32px);
-                left: 0;
                 display: unset;
               }
               @include esm{
-                width: calc(100% - 32px);
-                left: 0;
                 display: unset;
               }
             }
           }
         }
       }
-
-
     }
     @include transition(all ease 300ms);
     &.fixed{
       background: rgba($white,.95);
       @include box-shadow(0px 0px 21px -18px #333);
-
-      .navbar-collapse{
-        &.collapsing,&.show{
-          @include md{
-            background: transparent;
-          }
-          @include sm{
-            background: transparent;
-          }
-          @include esm{
+      @include md{
+        .navbar-collapse{
+          &.collapsing,&.show{
             background: transparent;
           }
         }
-        .navbar-nav{
-          li.nav-item{
+      }
+      @include sm{
+        .navbar-collapse{
+          &.collapsing,&.show{
+            background: transparent;
+          }
+        }
+      }
+      @include esm{
+        .navbar-collapse{
+          &.collapsing,&.show{
+            background: transparent;
+          }
+        }
+      }
+      .menu-right{
+        li.nav-item{
+          &:hover{
             .custom-dropdown-menu{
+              top: 40px !important;
+              position: relative;
+              z-index: -99;
               @include md{
-                margin-left: 0;
-                width: 100% ;
+                top: unset !important;
+                width: 100% !important;
+                margin-left: 0 !important;
               }
               @include sm{
-                margin-left: 0;
-                width: 100% ;
+                top: unset !important;
+                width: 100% !important;
+                margin-left: 0 !important;
               }
               @include esm{
-                margin-left: 0;
-                width: 100% ;
+                top: unset !important;
+                width: 100% !important;
+                margin-left: 0 !important;
+              }
+              &:before{
+                display: none;
               }
             }
           }
@@ -892,6 +869,44 @@ section#about{
 section#slider{
   @include md{
     min-height: unset;
+  }
+  .social{
+    right: 40px;
+    position: absolute;
+    margin-top: 25%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    ul.social-link{
+      padding: 0;
+      margin: 0;
+      flex: 0 0 100%;
+      max-width: 100%;
+      @include esm{
+        display: none;
+      }
+      li{
+        list-style-type: none;
+        a{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          @include border-radius(100px);
+          margin-bottom: 10px;
+          width: 30px;
+          height: 30px;
+          color: $white;
+          background: $primary;
+          @include transition(all ease 300ms);
+          border: 1px solid $primary;
+          &:hover{
+            color: $primary;
+            background: transparent;
+          }
+        }
+      }
+    }
   }
   .slider-wrap{
     position: relative;
