@@ -20,6 +20,7 @@ gulp.task("concatScripts", function() {
         'assets/js/vendor/magnificpopup.min.js',
         'assets/js/vendor/slick.min.js',
         'assets/js/vendor/pace.min.js',
+        'assets/js/vendor/ionrangeslider.min.js',
         ])
     .pipe(maps.init())
     .pipe(concat('main.js'))
