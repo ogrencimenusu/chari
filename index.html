@@ -35,14 +35,36 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto menu">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">HOME</a>
+                    <li class="nav-item ">
+                        <div class="nav-link">HOME</div>
+                        <div class="custom-dropdown-menu">
+                            <div class="main-title">
+                                HOME PAGES.
+                            </div>
+                            <a href="index.html" class="list-item">
+                                Header 1
+                            </a>
+                            <a href="index-2.html" class="list-item">
+                                Header 2
+                            </a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="product-detail.html">STORE</a>
+                        <div class="nav-link">PRODUCTS</div>
+                        <div class="custom-dropdown-menu">
+                            <div class="main-title">
+                                PRODUCTS PAGES.
+                            </div>
+                            <a href="product.html" class="list-item">
+                                Products List
+                            </a>
+                            <a href="product-detail.html" class="list-item">
+                                Product Details
+                            </a>
+                        </div>
                     </li>
                     <li class="nav-item ">
                         <div class="nav-link">BLOG</div>
@@ -73,68 +95,59 @@
                                     MY CART.
                                 </div>
                                 <div class="item-wrap">
-                                    <div class="media">
+                                    <p class="alert alert-secondary cart-null">Null Cart</p>
+                                    <div class="media" data-itemId="2">
+                                        <img class="media-img" src="assets/img/shopcart-2.jpg" alt="">
+                                        <div class="media-body">
+                                            <a class="title" href="">
+                                                Default Cart Item 2
+                                            </a>
+                                            <p>
+                                                <span class="count">
+                                                    <span class="count-number">1</span>
+                                                    x
+                                                </span>
+                                                <span class="price">
+                                                    $ <span class="price-number">
+                                                        10
+                                                    </span>
+                                                </span>
+                                                <span class="discount">
+                                                    -<span class="discount-number">15</span>
+                                                    % discount
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="media-delete">
+                                            <a href="#0" data-id="2">
+                                                <i class='uil uil-trash-alt'></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="media" data-itemId="1">
                                         <img class="media-img" src="assets/img/shopcart-1.jpg" alt="">
                                         <div class="media-body">
                                             <a class="title" href="">
-                                                Xbox One S Halo
-                                                Collection Bund
+                                                Default Cart Item 1
                                             </a>
                                             <p>
                                                 <span class="count">
-                                                    1x
+                                                    <span class="count-number">1</span>
+                                                    x
                                                 </span>
                                                 <span class="price">
-                                                    $240.00
+                                                    $ <span class="price-number">
+                                                        20
+                                                    </span>
+                                                </span>
+                                                <span class="discount">
+                                                    -<span class="discount-number">5</span>
+                                                    % discount
                                                 </span>
                                             </p>
                                         </div>
                                         <div class="media-delete">
-                                            <a href="#0">
-                                                <i class='uil uil-trash-alt'></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <img class="media-img" src="assets/img/shopcart-2.jpg" alt="">
-                                        <div class="media-body">
-                                            <a class="title" href="">
-                                                Xbox One S Halo
-                                                Collection Bund
-                                            </a>
-                                            <p>
-                                                <span class="count">
-                                                    1x
-                                                </span>
-                                                <span class="price">
-                                                    $240.00
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="media-delete">
-                                            <a href="#0">
-                                                <i class='uil uil-trash-alt'></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <img class="media-img" src="assets/img/shopcart-2.jpg" alt="">
-                                        <div class="media-body">
-                                            <a class="title" href="">
-                                                Xbox One S Halo
-                                                Collection Bund
-                                            </a>
-                                            <p>
-                                                <span class="count">
-                                                    1x
-                                                </span>
-                                                <span class="price">
-                                                    $240.00
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="media-delete">
-                                            <a href="#0">
+                                            <a href="#0" data-id="1">
                                                 <i class='uil uil-trash-alt'></i>
                                             </a>
                                         </div>
@@ -143,7 +156,7 @@
                                 <div class="total">
                                     <hr>
                                     <p>
-                                        Total: <span class="price">$240.00</span>
+                                        Total: <span class="price">$ <span class="total-price-num">240.00</span></span>
                                     </p>
                                     <a href="#0" class="btn payment">
                                         Proceed To Check Out
@@ -267,18 +280,15 @@
                 });
                 slider.on('init', function(e, slick) {
                     var $firstAnimatingElements = $('div.slick-slide:first-child').find('[data-animation]');
-                    console.log($firstAnimatingElements)
                     doAnimations($firstAnimatingElements);
                 });
                 slider.on('beforeChange', function(e, slick, currentSlide, nextSlide) {
                     var $animatingElements = $('div.slick-slide[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
                     doAnimations($animatingElements);
-                    console.log($animatingElements)
 
                 });
 
                 function doAnimations(elements) {
-                    console.log($(this))
                     var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
                     elements.each(function() {
                         var $this = $(this);
@@ -379,22 +389,29 @@
                 </div>
                 <div class="deals-wrap w-100">
                     <div class="item">
-                        <img src="assets/img/deals-1.jpg" alt="">
+                        <img  src="assets/img/deals-1.jpg" alt="">
                         <div class="new">
                             NEW
                         </div>
                         <div class="trans">
-                            <a href="">
+                            <a
+                                href="#0"
+                                class="addCartItem"
+                                data-img="deals-1.jpg"
+                                data-title="Deal Item 1"
+                                data-price="100.00"
+                                data-count="1"
+                                data-discount="0"
+                                data-id="10">
                                 <i class="fas fa-cart-plus"></i>
                             </a>
                             <a href="">
                                 <i class="far fa-heart"></i>
                             </a>
-
                         </div>
                         <div class="title">
                             <a href="product-detail.html">
-                                Lorem ipsum dolor sit amet
+                                Deal Item 1
                             </a>
                         </div>
                         <div class="price">
@@ -402,124 +419,129 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="assets/img/deals-3.jpg" alt="">
+                        <img  src="assets/img/deals-2.jpg" alt="">
                         <div class="new">
                             NEW
                         </div>
                         <div class="trans">
-                            <a href="">
+                            <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="deals-2.jpg"
+                                    data-title="Deal Item 2"
+                                    data-price="200.00"
+                                    data-count="1"
+                                    data-discount="0"
+                                    data-id="12">
                                 <i class="fas fa-cart-plus"></i>
                             </a>
                             <a href="">
                                 <i class="far fa-heart"></i>
                             </a>
-
                         </div>
                         <div class="title">
                             <a href="product-detail.html">
-                               Accusamus ad adipisci aliquid architecto
+                                Deal Item 2
                             </a>
                         </div>
                         <div class="price">
-                            $100.00
+                            $200.00
                         </div>
                     </div>
                     <div class="item">
-                        <img src="assets/img/deals-2.jpg" alt="">
+                        <img  src="assets/img/deals-3.jpg" alt="">
                         <div class="new">
                             NEW
                         </div>
                         <div class="trans">
-                            <a href="">
+                            <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="deals-3.jpg"
+                                    data-title="Deal Item 3"
+                                    data-price="300.00"
+                                    data-count="1"
+                                    data-discount="0"
+                                    data-id="13">
                                 <i class="fas fa-cart-plus"></i>
                             </a>
                             <a href="">
                                 <i class="far fa-heart"></i>
                             </a>
-
                         </div>
                         <div class="title">
                             <a href="product-detail.html">
-                                Deleniti distinctio dolores est fugiat ipsum magni nobis odio officia
+                                Deal Item 3
                             </a>
                         </div>
                         <div class="price">
-                            $100.00
+                            $300.00
                         </div>
                     </div>
                     <div class="item">
-                        <img src="assets/img/deals-1.jpg" alt="">
+                        <img  src="assets/img/deals-4.jpg" alt="">
                         <div class="new">
                             NEW
                         </div>
                         <div class="trans">
-                            <a href="">
+                            <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="deals-4.jpg"
+                                    data-title="Deal Item 4"
+                                    data-price="400.00"
+                                    data-count="1"
+                                    data-discount="0"
+                                    data-id="14">
                                 <i class="fas fa-cart-plus"></i>
                             </a>
                             <a href="">
                                 <i class="far fa-heart"></i>
                             </a>
-
                         </div>
                         <div class="title">
                             <a href="product-detail.html">
-                                Pariatur perspiciatis rerum similique suscipit ullam, voluptatibus!
+                                Deal Item 4
                             </a>
                         </div>
                         <div class="price">
-                            $100.00
+                            $400.00
                         </div>
                     </div>
                     <div class="item">
-                        <img src="assets/img/deals-2.jpg" alt="">
+                        <img  src="assets/img/deals-2.jpg" alt="">
                         <div class="new">
                             NEW
                         </div>
                         <div class="trans">
-                            <a href="">
+                            <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="deals-2.jpg"
+                                    data-title="Deal Item 2"
+                                    data-price="200.00"
+                                    data-count="1"
+                                    data-discount="0"
+                                    data-id="12">
                                 <i class="fas fa-cart-plus"></i>
                             </a>
                             <a href="">
                                 <i class="far fa-heart"></i>
                             </a>
-
                         </div>
                         <div class="title">
                             <a href="product-detail.html">
-                                Lorem ipsum dolor sit amet
+                                Deal Item 2 Clone
                             </a>
                         </div>
                         <div class="price">
-                            $100.00
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="assets/img/deals-3.jpg" alt="">
-                        <div class="new">
-                            NEW
-                        </div>
-                        <div class="trans">
-                            <a href="">
-                                <i class="fas fa-cart-plus"></i>
-                            </a>
-                            <a href="">
-                                <i class="far fa-heart"></i>
-                            </a>
-
-                        </div>
-                        <div class="title">
-                            <a href="product-detail.html">
-                                Lorem ipsum dolor sit amet
-                            </a>
-                        </div>
-                        <div class="price">
-                            $100.00
+                            $200.00
                         </div>
                     </div>
                 </div>
                 <script>
                     $('#deals .deals-wrap').slick({
-                        infinite: true,
+                        infinite: false,
                         slidesToShow: 4,
                         slidesToScroll: 4,
                         prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
@@ -571,7 +593,16 @@
                                 </div>
                             </div>
                             <div class="trans">
-                                <a href="">
+                                <a
+                                   href="#0"
+                                   class="addCartItem"
+                                   data-img="trend-1.jpg"
+                                   data-title="Most Item 1"
+                                   data-price="100.00"
+                                   data-count="1"
+                                   data-discount="15"
+                                   data-id="21"
+                                >
                                     <i class="fas fa-cart-plus"></i>
                                     Add to cart
                                 </a>
@@ -580,13 +611,13 @@
                         <div class="caption">
                             <div class="price">
                                 <a href="product-detail.html" class="title">
-                                    Lorem ipsum dolor sit amet
+                                    Most Item 1
                                 </a>
                                 <div class="new-price">
                                     $100.00
                                 </div>
                                 <div class="old-price">
-                                    $100.00
+                                    $120.00
                                 </div>
                             </div>
                         </div>
@@ -598,14 +629,23 @@
                             <img src="assets/img/trend-2.jpg" alt="">
                             <div class="left-fix">
                                 <div class="discount">
-                                    -15%
+                                    -25%
                                 </div>
                                 <div class="new">
                                     NEW
                                 </div>
                             </div>
                             <div class="trans">
-                                <a href="">
+                                <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="trend-2.jpg"
+                                    data-title="Most Item 2"
+                                    data-price="200.00"
+                                    data-count="1"
+                                    data-discount="25"
+                                    data-id="22"
+                                >
                                     <i class="fas fa-cart-plus"></i>
                                     Add to cart
                                 </a>
@@ -614,13 +654,53 @@
                         <div class="caption">
                             <div class="price">
                                 <a href="product-detail.html" class="title">
-                                    Lorem ipsum dolor sit amet
+                                    Most Item 2
                                 </a>
                                 <div class="new-price">
-                                    $100.00
+                                    $200.00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="assets/img/trend-3.jpg" alt="">
+                            <div class="left-fix">
+                                <div class="discount">
+                                    -35%
+                                </div>
+                                <div class="new">
+                                    NEW
+                                </div>
+                            </div>
+                            <div class="trans">
+                                <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="trend-3.jpg"
+                                    data-title="Most Item 3"
+                                    data-price="300.00"
+                                    data-count="1"
+                                    data-discount="35"
+                                    data-id="23"
+                                >
+                                    <i class="fas fa-cart-plus"></i>
+                                    Add to cart
+                                </a>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <div class="price">
+                                <a href="product-detail.html" class="title">
+                                    Most Item 3
+                                </a>
+                                <div class="new-price">
+                                    $300.00
                                 </div>
                                 <div class="old-price">
-                                    $100.00
+                                    $130.00
                                 </div>
                             </div>
                         </div>
@@ -632,14 +712,23 @@
                             <img src="assets/img/trend-4.jpg" alt="">
                             <div class="left-fix">
                                 <div class="discount">
-                                    -15%
+                                    -45%
                                 </div>
                                 <div class="new">
                                     NEW
                                 </div>
                             </div>
                             <div class="trans">
-                                <a href="">
+                                <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="trend-4.jpg"
+                                    data-title="Most Item 4"
+                                    data-price="400.00"
+                                    data-count="1"
+                                    data-discount="45"
+                                    data-id="24"
+                                >
                                     <i class="fas fa-cart-plus"></i>
                                     Add to cart
                                 </a>
@@ -648,47 +737,13 @@
                         <div class="caption">
                             <div class="price">
                                 <a href="product-detail.html" class="title">
-                                    Lorem ipsum dolor sit amet
+                                    Most Item 4
                                 </a>
                                 <div class="new-price">
-                                    $100.00
+                                    $400.00
                                 </div>
                                 <div class="old-price">
-                                    $100.00
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="item">
-                        <div class="img-wrap">
-                            <img src="assets/img/trend-4.jpg" alt="">
-                            <div class="left-fix">
-                                <div class="discount">
-                                    -15%
-                                </div>
-                                <div class="new">
-                                    NEW
-                                </div>
-                            </div>
-                            <div class="trans">
-                                <a href="">
-                                    <i class="fas fa-cart-plus"></i>
-                                    Add to cart
-                                </a>
-                            </div>
-                        </div>
-                        <div class="caption">
-                            <div class="price">
-                                <a href="product-detail.html" class="title">
-                                    Lorem ipsum dolor sit amet
-                                </a>
-                                <div class="new-price">
-                                    $100.00
-                                </div>
-                                <div class="old-price">
-                                    $100.00
+                                    $140.00
                                 </div>
                             </div>
                         </div>
@@ -700,14 +755,23 @@
                             <img src="assets/img/trend-5.jpg" alt="">
                             <div class="left-fix">
                                 <div class="discount">
-                                    -15%
+                                    -55%
                                 </div>
                                 <div class="new">
                                     NEW
                                 </div>
                             </div>
                             <div class="trans">
-                                <a href="">
+                                <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="trend-5.jpg"
+                                    data-title="Most Item 5"
+                                    data-price="500.00"
+                                    data-count="1"
+                                    data-discount="55"
+                                    data-id="25"
+                                >
                                     <i class="fas fa-cart-plus"></i>
                                     Add to cart
                                 </a>
@@ -716,13 +780,10 @@
                         <div class="caption">
                             <div class="price">
                                 <a href="product-detail.html" class="title">
-                                    Lorem ipsum dolor sit amet
+                                    Most Item 5
                                 </a>
                                 <div class="new-price">
-                                    $100.00
-                                </div>
-                                <div class="old-price">
-                                    $100.00
+                                    $500.00
                                 </div>
                             </div>
                         </div>
@@ -734,14 +795,23 @@
                             <img src="assets/img/trend-6.jpg" alt="">
                             <div class="left-fix">
                                 <div class="discount">
-                                    -15%
+                                    -65%
                                 </div>
                                 <div class="new">
                                     NEW
                                 </div>
                             </div>
                             <div class="trans">
-                                <a href="">
+                                <a
+                                    href="#0"
+                                    class="addCartItem"
+                                    data-img="trend-6.jpg"
+                                    data-title="Most Item 6"
+                                    data-price="600.00"
+                                    data-count="1"
+                                    data-discount="65"
+                                    data-id="26"
+                                >
                                     <i class="fas fa-cart-plus"></i>
                                     Add to cart
                                 </a>
@@ -750,13 +820,13 @@
                         <div class="caption">
                             <div class="price">
                                 <a href="product-detail.html" class="title">
-                                    Lorem ipsum dolor sit amet
+                                    Most Item 6
                                 </a>
                                 <div class="new-price">
-                                    $100.00
+                                    $600.00
                                 </div>
                                 <div class="old-price">
-                                    $100.00
+                                    $800.00
                                 </div>
                             </div>
                         </div>

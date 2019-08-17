@@ -243,20 +243,30 @@
                             </div>
                         </div>
                         <script>
+                            $('.slider-for').each(function () {
+                                $(this).find('.slider-item').zoom({
+                                    magnify:2
+                                });
+                            });
                             $('.slider-for').slick({
                                 slidesToShow: 1,
                                 slidesToScroll: 1,
-                                arrows: false,
                                 fade: true,
+                                prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+                                nextArrow:'<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
                                 asNavFor: '.slider-nav',
 
                             });
                             $('.slider-nav').slick({
+                                prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+                                nextArrow:'<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+
                                 slidesToShow: 4,
                                 asNavFor: '.slider-for',
                                 focusOnSelect: true,
                                 verticalSwiping: true,
                                 vertical: true,
+                                centerMode:true,
                                 responsive: [
                                     {
                                         breakpoint: 576,
