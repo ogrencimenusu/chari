@@ -1,7 +1,7 @@
 /* Base Styles -------------------- */
 body{
   font-family: 'Poppins', sans-serif;
-  color: $primary;
+  color: $secondary;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
@@ -142,6 +142,7 @@ header{
               font-weight: 500;
               padding-right: 25px;
               padding-left: 25px;
+              color: $secondary;
               @include transition(all ease 300ms);
               @include md{
                 padding: 0;
@@ -150,7 +151,7 @@ header{
               }
             }
             &.active{
-              a.nav-link{
+              .nav-link{
                 color: $primary;
                 font-weight: bold;
               }
@@ -182,6 +183,7 @@ header{
             }
             .nav-link{
               position: relative;
+              color: $secondary;
               @include md{
                 position: unset;
                 margin: 0px 15px;
@@ -316,8 +318,9 @@ header{
               display: block;
               text-decoration: none;
               margin-top: 15px;
+              color: $secondary;
               &:hover{
-                color: $secondary;
+                color: $primary;
               }
             }
             .main-title{
@@ -339,7 +342,9 @@ header{
               }
             }
             .item-wrap{
-              overflow-y: auto;
+              @include lg{
+                overflow-y: auto;
+              }
               max-height: 300px ;
               p.cart-null{
                 display: none;
@@ -364,7 +369,7 @@ header{
                     font-weight: 500;
                     text-decoration: none;
                     display: block;
-                    color: $primary;
+                    color: $secondary;
                   }
                   p{
                     margin-top: 5px;
@@ -383,11 +388,12 @@ header{
                 }
                 .media-delete{
                   a{
+                    color: $secondary;
                     i{
                       font-size: 20px;
                     }
                     &:hover{
-                      color: $danger;
+                      color: $primary;
                     }
                   }
                 }
@@ -909,6 +915,8 @@ section#about{
 section#slider{
   height: 100vh;
   overflow: hidden;
+  background-image: url('#{$img-path}slider-bg.jpg');
+  background-size: cover;
   @include md{
     min-height: unset;
   }
@@ -917,7 +925,7 @@ section#slider{
     height: 100vh;
     &:before{
       left: 0;
-      content: '';
+      //content: '';
       position: absolute;
       top: 0;
       width: 100%;
@@ -1247,20 +1255,20 @@ section#newsletter{
 .page{
   padding: 70px 0px;
   .breadcrumb-wrap{
-    background: rgba($primary,.1);
+    background: rgba($secondary,.1);
     margin-bottom: 50px;
     .breadcrumb{
       background: transparent;
       .breadcrumb-item{
         a{
           text-decoration: none;
-          color: rgba($primary,.1);
+          color: rgba($gray-600,1);
           &:hover{
-            color: rgba($primary,.5);
+            color: rgba($secondary,.5);
           }
         }
         &:before{
-          color: rgba($primary,.1);
+          color: rgba($secondary,.1);
         }
         &.active{
           color: $primary;
@@ -1918,22 +1926,25 @@ section#newsletter{
   &.page-product{
     .box{
       width: 100%;
+      padding: 0px 15px;
       .title{
         margin-bottom: 25px;
         margin-top: 0;
         font-size: 20px;
         font-weight: 600;
-
+        color: $secondary;
       }
       .box-link{
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
         font-size: 14px;
         justify-content: space-between;
         text-decoration: none;
-        padding: 4px 8px;
+        padding: 7px 8px;
+        margin-bottom: 5px;
         transition: all ease 300ms;
+        color: $secondary ;
+        @include border-radius(4px);
         &:nth-last-child(1){
           margin-bottom: 0;
         }
@@ -1941,10 +1952,15 @@ section#newsletter{
           background: $gray-200;
         }
         .badges{
-          background:$gray-100;
-          display: block;
-          padding:3px 5px;
+          background: $gray-100;
+          border: 1px solid $gray-200;
+          @include border-radius(4px);
+          min-width: 30px;
+          min-height: 10px;
           font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
       hr{
@@ -1962,6 +1978,7 @@ section#newsletter{
         }
         button{
           margin-top: 20px;
+          color: $white;
         }
       }
       &.box-popular{
@@ -2006,7 +2023,127 @@ section#newsletter{
         }
       }
     }
+    .products-wrap{
+      .item{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border: 1px solid $gray-200;
+        padding: 10px;
+        .img-wrap{
+          position: relative;
+          img{
+            width: 100%;
+          }
+          .trans{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @extend .animated;
+            @extend .slideInRight;
+
+            display: none;
+
+            a{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5px 10px;
+              background: rgba($gray-400,1);
+              color: $primary;
+              text-decoration: none;
+              margin-bottom: 20px;
+              @include border-radius(100px);
+              @include transition(all ease 300ms);
+              outline: 0;
+              font-size: 14px;
+
+              &:hover{
+                color: $white;
+                background: rgba($primary,.50);
+              }
+              i{
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+        .left-fix{
+          position: absolute;
+          top: 20px;
+          display: flex;
+          font-size: 14px;
+          @include md{
+            font-size: 12px ;
+          }
+          .new{
+            background: $primary;
+            font-weight: 500;
+            padding: 5px 10px;
+            color: $white;
+            margin-left: 20px;
+          }
+          .discount{
+            background: $danger;
+            font-weight: 500;
+            padding: 5px 10px;
+            color: $white;
+            margin-left: 20px;
+          }
+        }
+        .caption{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px 0px;
+          .price{
+            width: 100%;
+            .title{
+              font-size: 20px;
+              color: $secondary;
+              font-weight: 600;
+              width: 100%;
+              display: block;
+              @include md{
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 14px;
+              }
+            }
+            .new-price{
+              color: $primary;
+              margin-right: 15px;
+              float: left;
+              @include md{
+                font-size: 13px;
+              }
+            }
+            .old-price{
+              text-decoration: line-through;
+              color: $gray-500;
+              @include md{
+                font-size: 13px;
+              }
+            }
+          }
+        }
+        &:hover{
+          .trans{
+            display: block;
+            @extend .slideInRight;
+          }
+        }
+      }
+      nav{
+        justify-content: flex-end;
+        display: flex;
+        a.page-link{
+          @include border-radius(0);
+        }
+      }
+    }
   }
+
 }
 footer{
   padding: 50px 0px;
