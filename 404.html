@@ -188,6 +188,27 @@
     <div class="container position-relative">
         <div class="bounce bounce-big"></div>
         <div class="bounce bounce-small"></div>
+        <script>
+            var mouseX = 0, mouseY = 0;
+            $(document).mousemove(function(e){
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+            });
+
+            // cache the selector
+            var follower = $(".bounce-big");
+            var follower2 = $(".bounce-small");
+            var xp = 0, yp = 0;
+            var loop = setInterval(function(){
+                // change 12 to alter damping higher is slower
+                xp += (mouseX - xp) / 100;
+                yp += (mouseY - yp) / 100;
+                follower.css({left:xp, top:yp});
+                follower2.css({left:xp - 50, top:yp - 50});
+
+            }, 30);
+
+        </script>
         <h1>404</h1>
         <h3>PAGE NOT FOUND</h3>
         <h4>Sorry, we couldn't find the page you're looking for</h4>

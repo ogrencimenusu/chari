@@ -21,6 +21,7 @@ gulp.task("concatScripts", function() {
         'assets/js/vendor/slick.min.js',
         'assets/js/vendor/pace.min.js',
         'assets/js/vendor/ionrangeslider.min.js',
+        'assets/js/vendor/zoom.min.js',
         ])
     .pipe(maps.init())
     .pipe(concat('main.js'))

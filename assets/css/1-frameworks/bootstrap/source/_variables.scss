@@ -45,8 +45,8 @@ $green:   #5BA10C !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$dark-blue-1: #1E2F4F;
-$dark-blue-2: #485C8B;
+$dark-blue-1: #EE8139;
+$dark-blue-2: #1E2F4F;
 
 
 $colors: () !default;
@@ -237,9 +237,9 @@ $line-height-sm:              1.5 !default;
 $border-width:                1px !default;
 $border-color:                $gray-300 !default;
 
-$border-radius:               .25rem !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-sm:            .2rem !default;
+$border-radius:               4px !default;
+$border-radius-lg:            4px !default;
+$border-radius-sm:            4px !default;
 
 $rounded-pill:                50rem !default;
 

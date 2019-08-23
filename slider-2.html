@@ -217,16 +217,16 @@
     </nav>
 </header>
 <main>
-    <section id="slider">
+    <section id="slider-2">
         <div class="slider-wrap w-100">
             <div class="item item-1">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-8 m-auto col-sm-4">
-                            <img data-animation="slideInLeft" data-delay="0" class="item-img" src="assets/img/slider-4.png" alt="">
+                        <div class="col-8 m-auto col-sm-6">
+                            <img data-animation="slideInLeft" data-delay="0" class="item-img" src="assets/img/slider-2-1.png" alt="">
                         </div>
                         <div class="col-sm-6">
-                            <h3 data-animation="fadeInRightBig" data-delay="0.1s" class="item-text-1 text-blue">Plant Make</h3>
+                            <h3 data-animation="fadeInRightBig" data-delay="0.1s" class="item-text-1">$100.00</h3>
                             <h3 data-animation="fadeInRightBig" data-delay=".2s" class="item-text-2 text-green">People Happy</h3>
                             <p data-animation="fadeInRightBig" data-delay=".3s" class="item-text-3">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -241,16 +241,16 @@
             <div class="item item-1">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-8 m-auto col-sm-4">
-                            <img data-animation="slideInLeft" data-delay="0" class="item-img" src="assets/img/slider-2.png" alt="">
+                        <div class="col-8 m-auto col-sm-6">
+                            <img data-animation="slideInLeft" data-delay="0" class="item-img" src="assets/img/slider-2-1.png" alt="">
                         </div>
                         <div class="col-sm-6">
-                            <h3 data-animation="fadeInRightBig" data-delay="0.1s" class="item-text-1 text-blue">Plant Make</h3>
+                            <h3 data-animation="fadeInRightBig" data-delay="0.1s" class="item-text-1">$100.00</h3>
                             <h3 data-animation="fadeInRightBig" data-delay=".2s" class="item-text-2 text-green">People Happy</h3>
                             <p data-animation="fadeInRightBig" data-delay=".3s" class="item-text-3">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <a data-animation="slideInUp" data-delay=".4s" href="" class="item-btn btn link">
+                            <a data-animation="fadeInRightBig" data-delay=".4s" href="" class="item-btn btn link">
                                 SHOP NOW
                             </a>
                         </div>
@@ -260,30 +260,31 @@
             <div class="item item-1">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-8 m-auto col-sm-4">
-                            <img data-animation="slideInLeft" data-delay="0" class="item-img" src="assets/img/slider-3.png" alt="">
+                        <div class="col-8 m-auto col-sm-6">
+                            <img data-animation="slideInLeft" data-delay="0" class="item-img" src="assets/img/slider-2-1.png" alt="">
                         </div>
                         <div class="col-sm-6">
-                            <h3 data-animation="fadeInRightBig" data-delay="0.1s" class="item-text-1 text-blue">Plant Make</h3>
+                            <h3 data-animation="fadeInRightBig" data-delay="0.1s" class="item-text-1">$100.00</h3>
                             <h3 data-animation="fadeInRightBig" data-delay=".2s" class="item-text-2 text-green">People Happy</h3>
                             <p data-animation="fadeInRightBig" data-delay=".3s" class="item-text-3">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <a data-animation="slideInUp" data-delay=".4s" href="" class="item-btn btn link">
+                            <a data-animation="fadeInRightBig" data-delay=".4s" href="" class="item-btn btn link">
                                 SHOP NOW
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <script>
             $(document).ready(function() {
-                var slider=$('#slider .slider-wrap');
+                var slider=$('#slider-2 .slider-wrap');
                 slider.slick({
                     autoplay: true,
                     autoplaySpeed: 5000,
+                    prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+                    nextArrow:'<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
                     dots: true,
                     fade: true
                 });

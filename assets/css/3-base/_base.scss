@@ -1,7 +1,7 @@
 /* Base Styles -------------------- */
 body{
   font-family: 'Poppins', sans-serif;
-  color: $primary;
+  color: $secondary;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
@@ -142,6 +142,7 @@ header{
               font-weight: 500;
               padding-right: 25px;
               padding-left: 25px;
+              color: $secondary;
               @include transition(all ease 300ms);
               @include md{
                 padding: 0;
@@ -150,7 +151,7 @@ header{
               }
             }
             &.active{
-              a.nav-link{
+              .nav-link{
                 color: $primary;
                 font-weight: bold;
               }
@@ -182,6 +183,7 @@ header{
             }
             .nav-link{
               position: relative;
+              color: $secondary;
               @include md{
                 position: unset;
                 margin: 0px 15px;
@@ -316,8 +318,9 @@ header{
               display: block;
               text-decoration: none;
               margin-top: 15px;
+              color: $secondary;
               &:hover{
-                color: $secondary;
+                color: $primary;
               }
             }
             .main-title{
@@ -339,13 +342,24 @@ header{
               }
             }
             .item-wrap{
-              overflow-y: auto;
+              overflow: auto;
+              max-height: 300px ;
+              p.cart-null{
+                display: none;
+              }
 
               .media{
                 margin-bottom: 10px;
+                padding: 3px 3px;
+                @include border-radius(4px);
+                &:hover{
+                  background: $gray-100;
+                }
                 .media-img{
                   margin-right: 10px;
                   @include border-radius(5px);
+                  width: 50px;
+                  height: 50px;
                 }
                 .media-body{
                   .title{
@@ -353,7 +367,7 @@ header{
                     font-weight: 500;
                     text-decoration: none;
                     display: block;
-                    color: $primary;
+                    color: $secondary;
                   }
                   p{
                     margin-top: 5px;
@@ -364,15 +378,20 @@ header{
                     .price{
                       color: $secondary;
                     }
+                    .discount{
+                      display: block;
+                      color: $danger;
+                    }
                   }
                 }
                 .media-delete{
                   a{
+                    color: $secondary;
                     i{
                       font-size: 20px;
                     }
                     &:hover{
-                      color: $danger;
+                      color: $primary;
                     }
                   }
                 }
@@ -517,7 +536,7 @@ section#categories{
 section#deals{
   margin-top: 80px;
   padding: 50px 0px;
-  background: rgba($primary,.1);
+  background: rgba($secondary,.1);
   .main-title{
     font-size: 40px;
     margin-bottom: 50px;
@@ -536,7 +555,7 @@ section#deals{
     }
     width: 50px;
     height: 50px;
-    background: rgba($primary,.30);
+    background: rgba($secondary,.30);
     color: $secondary;
     z-index: 1;
     font-size: 14px;
@@ -579,6 +598,8 @@ section#deals{
       img{
         width: 100%;
         padding: 10px;
+        padding-top: 70px;
+
       }
       .new{
         position: absolute;
@@ -588,6 +609,8 @@ section#deals{
         font-weight: 500;
         right: 20px;
         padding: 5px 10px;
+        @include border-radius($border-radius);
+
         color: $white;
         @include md{
           font-size: 12px ;
@@ -605,11 +628,12 @@ section#deals{
           justify-content: center;
           width: 50px;
           height: 50px;
-          background: rgba($primary,.15);
+          background: rgba($secondary,.15);
           color: $primary;
           text-decoration: none;
           margin: 0px 5px;
-          @include border-radius(100px);
+          @include border-radius($border-radius);
+
           @include transition(all ease 300ms);
           outline: 0;
           @include md{
@@ -618,7 +642,7 @@ section#deals{
           }
           &:hover{
             color: $white;
-            background: rgba($primary,.50);
+            background: rgba($primary,1);
           }
         }
       }
@@ -630,6 +654,9 @@ section#deals{
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        a{
+          color: $secondary;
+        }
         @include md{
           font-size: 15px;
         }
@@ -690,10 +717,15 @@ section#most{
     margin-bottom: 30px;
     border: 1px solid $gray-200;
     padding: 10px;
+    @include border-radius($border-radius);
+
     .img-wrap{
       position: relative;
+      padding-top: 70px;
+
       img{
         width: 100%;
+        @include transition(all ease 300ms);
       }
       .trans{
         position: absolute;
@@ -701,7 +733,6 @@ section#most{
         bottom: 0;
         @extend .animated;
         @extend .slideInRight;
-
         display: none;
 
         a{
@@ -709,7 +740,8 @@ section#most{
           align-items: center;
           justify-content: center;
           padding: 5px 10px;
-          background: rgba($gray-400,1);
+          background: rgba($white,1);
+          border: 1px solid $primary;
           color: $primary;
           text-decoration: none;
           margin-bottom: 20px;
@@ -720,7 +752,7 @@ section#most{
 
           &:hover{
             color: $white;
-            background: rgba($primary,.50);
+            background: rgba($primary,1);
           }
           i{
             margin-right: 10px;
@@ -742,6 +774,7 @@ section#most{
         padding: 5px 10px;
         color: $white;
         margin-left: 20px;
+        @include border-radius($border-radius);
       }
       .discount{
         background: $danger;
@@ -749,6 +782,8 @@ section#most{
         padding: 5px 10px;
         color: $white;
         margin-left: 20px;
+        @include border-radius($border-radius);
+
       }
     }
     .caption{
@@ -756,6 +791,7 @@ section#most{
       justify-content: space-between;
       padding: 20px 0px;
       .price{
+        width: 100%;
         .title{
           font-size: 20px;
           color: $secondary;
@@ -787,12 +823,16 @@ section#most{
       }
     }
     &:hover{
+      img{
+        @include transform((scale(1.1) rotate(10deg)))
+      }
       .trans{
         display: block;
         @extend .slideInRight;
       }
     }
   }
+
 }
 section#about{
   .about-title{
@@ -890,9 +930,71 @@ section#about{
     }
   }
 }
+section#slider-2{
+  max-height: 500px;
+  min-height: 500px;
+  margin-top: 73px;
+  background: rgba($primary,.3);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 85px;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('#{$img-path}slider-2-mask.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .slick-list{
+    margin-bottom: -100px;
+  }
+  .slider-wrap{
+    .item{
+      .item-img{
+        width: 100%;
+      }
+    }
+    .slick-arrow{
+      background: $primary;
+      z-index: 3;
+      width: 40px;
+      height: 40px;
+      &:before{
+        display: block;
+        font-family: unicons;
+        color: $white;
+      }
+      &:hover{
+        background: $secondary;
+      }
+
+      &.slick-prev{
+        &:before{
+          content: '\e848';
+          left: 0;
+        }
+      }
+      &.slick-next{
+        &:before{
+          content: '\e84b';
+          right: -100px;
+          left: unset;
+        }
+      }
+    }
+  }
+}
 section#slider{
   height: 100vh;
   overflow: hidden;
+  background-image: url('#{$img-path}slider-bg.jpg');
+  background-size: cover;
   @include md{
     min-height: unset;
   }
@@ -901,7 +1003,7 @@ section#slider{
     height: 100vh;
     &:before{
       left: 0;
-      content: '';
+      //content: '';
       position: absolute;
       top: 0;
       width: 100%;
@@ -1169,7 +1271,7 @@ section#blogs{
 }
 section#newsletter{
   padding: 50px 0px;
-  background: rgba($primary,.2);
+  background: rgba($secondary,.1);
   .news-info{
     .row{
       @include md{
@@ -1231,20 +1333,20 @@ section#newsletter{
 .page{
   padding: 70px 0px;
   .breadcrumb-wrap{
-    background: rgba($primary,.1);
+    background: rgba($secondary,.1);
     margin-bottom: 50px;
     .breadcrumb{
       background: transparent;
       .breadcrumb-item{
         a{
           text-decoration: none;
-          color: rgba($primary,.1);
+          color: rgba($gray-600,1);
           &:hover{
-            color: rgba($primary,.5);
+            color: rgba($secondary,.5);
           }
         }
         &:before{
-          color: rgba($primary,.1);
+          color: rgba($secondary,.1);
         }
         &.active{
           color: $primary;
@@ -1641,8 +1743,31 @@ section#newsletter{
 
     .img-wrap{
       .img-thumbs{
+        &:before{
+          content: '';
+          background: linear-gradient(to bottom, white 40%, rgba(255, 255, 255, 0) 90%);
+          top: 20px;
+          width: calc(100% - 30px);
+          height: 40px;
+          position: absolute;
+          left: 15px;
+          z-index: 4;
+        }
+        &:after{
+          content: '';
+          background: linear-gradient(to top, white 40%, rgba(255, 255, 255, 0) 90%);
+          bottom: 20px;
+          width: calc(100% - 30px);
+          height: 40px;
+          position: absolute;
+          left: 15px;
+          z-index: 4;
+        }
         .slider-nav{
+          padding: 30px 0px;
+          position: relative;
           .slick-slide{
+            cursor: pointer;
             .slider-item{
               border-left: 1px solid rgba($primary,.1);
               padding: 10px;
@@ -1651,9 +1776,37 @@ section#newsletter{
                 width: 100%;
               }
             }
-            &.slick-current{
-              .slider-item{
+            &.slick-current.slick-active{
+              border: 1px solid $primary;
+            }
+          }
+          .slick-arrow{
+            background: $primary;
+            z-index: 3;
+            width: 100%;
+            left: 0;
+            &:before{
+              display: block;
+              font-family: unicons;
+              color: $white;
+            }
+            &:hover{
+              background: $secondary;
+            }
+
+            &.slick-prev{
+              &:before{
+                content: '\e844';
               }
+              top: unset;
+              bottom: -10px;
+            }
+            &.slick-next{
+              &:before{
+                content: '\e850';
+              }
+              bottom:unset;
+              top: 10px;
             }
           }
         }
@@ -1665,6 +1818,7 @@ section#newsletter{
         .slider-for{
           width: 100%;
           .slider-item{
+            cursor: zoom-in;
             padding: 10px;
             img{
               width: 100%;
@@ -1796,11 +1950,11 @@ section#newsletter{
       position: absolute;
       display: block;
       z-index: -1;
+      animation:wobble 10s linear infinite;
     }
     .bounce-big{
       width: 300px;
       height: 300px;
-      left: 110px;
       @include esm{
         overflow: hidden;
         left: 0;
@@ -1811,8 +1965,6 @@ section#newsletter{
     .bounce-small{
       width: 100px;
       height: 100px;
-      right: 121px;
-      bottom: 85px;
       @include esm{
         overflow: hidden;
         right: 0px;
@@ -1824,10 +1976,12 @@ section#newsletter{
       font-size: 200px;
       font-weight: 600;
       letter-spacing: 15px;
+
       @include esm{
         font-size: 100px;
       }
     }
+
     h3{
       font-size: 40px;
       letter-spacing: 15px;
@@ -1850,22 +2004,25 @@ section#newsletter{
   &.page-product{
     .box{
       width: 100%;
+      padding: 0px 15px;
       .title{
         margin-bottom: 25px;
         margin-top: 0;
         font-size: 20px;
         font-weight: 600;
-
+        color: $secondary;
       }
       .box-link{
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
         font-size: 14px;
         justify-content: space-between;
         text-decoration: none;
-        padding: 4px 8px;
+        padding: 7px 8px;
+        margin-bottom: 5px;
         transition: all ease 300ms;
+        color: $secondary ;
+        @include border-radius(4px);
         &:nth-last-child(1){
           margin-bottom: 0;
         }
@@ -1873,10 +2030,15 @@ section#newsletter{
           background: $gray-200;
         }
         .badges{
-          background:$gray-100;
-          display: block;
-          padding:3px 5px;
+          background: $gray-100;
+          border: 1px solid $gray-200;
+          @include border-radius(4px);
+          min-width: 30px;
+          min-height: 10px;
           font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
       hr{
@@ -1894,6 +2056,7 @@ section#newsletter{
         }
         button{
           margin-top: 20px;
+          color: $white;
         }
       }
       &.box-popular{
@@ -1938,7 +2101,220 @@ section#newsletter{
         }
       }
     }
+    .products-wrap{
+      .sale-product{
+        background: $gray-200;
+        margin-left: 15px;
+        margin-right: 15px;
+        position: relative;
+        padding: 20px 40px;
+        margin-bottom: 20px;
+        @include md{
+          margin-top: 20px;
+        }
+        @include sm{
+          margin-top: 20px;
+        }
+        @include esm{
+          margin-top: 20px;
+          padding-bottom: 100px;
+        }
+
+        h2{
+          max-width: 70%;
+          @include esm{
+            max-width: 100%;
+          }
+          span{
+            color: $danger;
+          }
+        }
+        p{
+          max-width: 70%;
+          color: $gray-800;
+          font-size: 14px;
+          @include esm{
+            max-width: 100%;
+          }
+        }
+        a{}
+        img{
+          position: absolute;
+          bottom: 0px;
+          right: 0;
+        }
+      }
+      .shorting{
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        @include esm{
+          display: unset;
+
+        }
+        .wrap-title{
+          font-weight: 600;
+          font-size: 18px;
+        }
+        .wrap-listing{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .short{
+            display: flex;
+            width: 80%;
+            justify-content: center;
+            align-items: center;
+            label{
+              width: 100px;
+              margin-bottom: 0;
+            }
+          }
+          .grid{
+            width: 20%;
+            display: flex;
+            justify-content: flex-end;
+            a{
+              margin: 0px 5px;
+              display: block;
+              text-decoration: none;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .item{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border: 1px solid $gray-200;
+        padding: 10px;
+        @include border-radius($border-radius);
+
+        .img-wrap{
+          position: relative;
+          padding-top: 70px;
+
+          img{
+            width: 100%;
+            @include transition(all ease 300ms);
+          }
+          .trans{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @extend .animated;
+            @extend .slideInRight;
+            display: none;
+
+            a{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5px 10px;
+              background: rgba($white,1);
+              border: 1px solid $primary;
+              color: $primary;
+              text-decoration: none;
+              margin-bottom: 20px;
+              @include border-radius(100px);
+              @include transition(all ease 300ms);
+              outline: 0;
+              font-size: 14px;
+
+              &:hover{
+                color: $white;
+                background: rgba($primary,1);
+              }
+              i{
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+        .left-fix{
+          position: absolute;
+          top: 20px;
+          display: flex;
+          font-size: 14px;
+          @include md{
+            font-size: 12px ;
+          }
+          .new{
+            background: $primary;
+            font-weight: 500;
+            padding: 5px 10px;
+            color: $white;
+            margin-left: 20px;
+            @include border-radius($border-radius);
+          }
+          .discount{
+            background: $danger;
+            font-weight: 500;
+            padding: 5px 10px;
+            color: $white;
+            margin-left: 20px;
+            @include border-radius($border-radius);
+
+          }
+        }
+        .caption{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px 0px;
+          .price{
+            width: 100%;
+            .title{
+              font-size: 20px;
+              color: $secondary;
+              font-weight: 600;
+              width: 100%;
+              display: block;
+              @include md{
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 14px;
+              }
+            }
+            .new-price{
+              color: $primary;
+              margin-right: 15px;
+              float: left;
+              @include md{
+                font-size: 13px;
+              }
+            }
+            .old-price{
+              text-decoration: line-through;
+              color: $gray-500;
+              @include md{
+                font-size: 13px;
+              }
+            }
+          }
+        }
+        &:hover{
+          img{
+            @include transform((scale(1.1) rotate(10deg)))
+          }
+          .trans{
+            display: block;
+            @extend .slideInRight;
+          }
+        }
+      }
+      nav{
+        justify-content: flex-end;
+        display: flex;
+        a.page-link{
+          @include border-radius(0);
+        }
+      }
+    }
   }
+
 }
 footer{
   padding: 50px 0px;
