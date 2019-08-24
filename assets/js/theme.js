@@ -8,7 +8,6 @@ $(document).ready(function() {
             $('header .navbar').removeClass('fixed');
         }
     });
-
     $(document).on('click', '.media-delete a', function(){
         var index = $(this).data('id')
         cartItemsDelete(index);
@@ -100,4 +99,26 @@ $(document).ready(function() {
             $('.dropdown-cart').find('.cart-null').show();
         }
     }
+
+
+    /*---------- Page 404 */
+    var mouseX = 0, mouseY = 0;
+    $(document).mousemove(function(e){
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+    });
+    // cache the selector
+    var follower = $(".bounce-big");
+    var follower2 = $(".bounce-small");
+    var xp = 0, yp = 0;
+    var loop = setInterval(function(){
+        // change 12 to alter damping higher is slower
+        xp += (mouseX - xp) / 100;
+        yp += (mouseY - yp) / 100;
+        follower.css({left:xp, top:yp});
+        follower2.css({left:xp - 50, top:yp - 50});
+
+    }, 30);
+    /* Page 404 END ----------*/
+
 });

@@ -1,0 +1,118 @@
+footer{
+  padding: 50px 0px;
+  background: $gray-100;
+  @include sm{
+    padding: 50px 0px 20px 0px;;
+  }
+  hr{
+    margin-top: 30px ;
+    margin-bottom: 30px ;
+    width: 100%;
+    padding: 0;
+  }
+  .footer-brand{
+    @include sm{
+      margin-bottom: 30px;
+    }
+    @include esm{
+      margin-bottom: 30px;
+    }
+    .address{
+      color: $gray-500;
+      a{
+        color: $gray-500;
+      }
+    }
+    .brand{
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: bold;
+      color: $secondary;
+      span{
+        color: rgba($primary,1);
+      }
+    }
+    ul.social{
+      display: flex;
+      margin: 0;
+      padding: 0;
+      margin-top: 10px;
+      li{
+        list-style-type: none;
+        margin-right: 10px;
+        a{
+          text-decoration: none;
+          width: 30px;
+          height: 30px;
+          color: $white;
+          background: $gray-400;
+          display: flex;
+          @include border-radius(100px);
+          @include transition(all ease 300ms);
+          align-items: center;
+          justify-content: center;
+          &:hover{
+            background: $secondary;
+          }
+
+        }
+      }
+    }
+  }
+  .quick-links{
+    .title{
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    ul{
+      padding: 0;
+      margin: 0;
+      li{
+        list-style-type: none;
+        margin-bottom: 10px;
+        a{
+          color: $gray-500;
+          @include transition(all ease 300ms);
+          &:hover{
+            color: rgba($secondary,.8);
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    font-size: 14px;
+    color: $gray-400;
+    @include esm{
+      margin: 0px 30px;
+      margin-bottom: 15px;
+      text-align: center;
+      .row{
+        justify-content: center;
+      }
+    }
+    a{
+      color: $secondary;
+      display: inline-block;
+      margin: 0px 10px;
+    }
+  }
+  .payment{
+    .row{
+      justify-content: flex-end;
+      padding: 0;
+      margin-bottom: 0;
+      @include esm{
+        justify-content: center;
+      }
+      li{
+        list-style-type: none;
+        a{
+          display: block;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
