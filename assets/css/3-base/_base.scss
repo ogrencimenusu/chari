@@ -493,41 +493,38 @@ section#categories{
   margin-top: 50px;
   margin-bottom: 80px;
   .category-item{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
     position: relative;
-    @include esm{
-      margin-bottom: 30px;
-    }
+    @include border-radius($border-radius);
+    background: $gray-300;
     img{
-      width: 100%;
-    }
-    a{
-      text-decoration: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      margin-left: auto;
       height: 100%;
-      padding: 15px;
-      border: 1px solid transparent;
+      min-height: 170px;
       @include transition(all ease 300ms);
-      &:hover{
-        padding: 0;
-        border-color: $primary;
+
+    }
+    &:hover{
+      img{
+        @include transform((scale(1.1) rotate(10deg)))
       }
-      h3{
-        background: rgba($white,.70);
-        margin: 0;
-        font-size: 40px;
-        font-weight: 600;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include md{
+    }
+    h3{
+      position: absolute;
+      a{
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+        padding: 0px 20px;
+        @include text-shadow(1px 1px 1px $gray-300);
+
+        span{
+          color: $secondary;
+          display: block;
           font-size: 25px;
-        }
-        @include sm{
-          font-size: 20px;
+          font-weight: 500;
         }
       }
     }
@@ -931,15 +928,15 @@ section#about{
   }
 }
 section#slider-2{
-  max-height: 500px;
-  min-height: 500px;
+  max-height: 520px;
+  min-height: 520px;
   margin-top: 73px;
   background: rgba($primary,.3);
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
-  margin-bottom: 85px;
+  margin-bottom: 155px;
   @include md{
     min-height: 300px;
     max-height: 300px;
@@ -949,6 +946,13 @@ section#slider-2{
     min-height: unset;
     max-height: unset;
     margin-top: 56px;
+    padding: 30px 0px;
+  }
+  @include esm{
+    min-height: unset;
+    max-height: unset;
+    margin-top: 56px;
+    padding: 30px 0px;
   }
   &:before{
     content: '';
@@ -961,30 +965,67 @@ section#slider-2{
     background-size: 100%;
     background-repeat: no-repeat;
   }
-  .slick-list{
-    @include lg{
-      margin-bottom: -100px;
-    }
-  }
   .slider-wrap{
+    margin-bottom: -110px;
+
     @include md{
       margin-bottom: 0;
     }
     @include sm{
       margin-bottom: 0;
     }
+    @include esm{
+      margin-bottom: 0;
+    }
     .slick-dots{
-      bottom: -45px;
-      width: 95%;
+      bottom: 72px;
+      width: 90%;
       right: 0;
-      @include md{
-        bottom: -32px;
+      display: flex;
+      justify-content: center;
+      @include lg{
+        bottom: -14px;
         width: 100%;
-        left: 0;
-        background: rgba($primary,.3);
-        padding-bottom: 10px;
+
+      }
+      @include md{
+        bottom: -14px;
+        width: 100%;
+
+      }
+      @include sm{
+        bottom: -50px;
+        width: 100%;
+
+      }
+      @include esm{
+        bottom: -50px;
+        width: 100%;
+
       }
       li{
+        background: rgba($primary,.3);
+        &:nth-child(1){
+          border-radius: 0px 0px 0px 4px;
+          margin-left: 120px;
+          @include sm{
+            margin-left: 0px;
+          }
+          @include esm{
+            margin-left: 0px;
+          }
+        }
+        &:nth-last-child(1){
+          border-radius: 0px 0px 4px 0px;
+        }
+        padding: 0px 20px;
+        margin: 0;
+        button{
+          &:before{
+            margin-left: 10px;
+          }
+        }
+
         &.slick-active{
           button{
             &:before{
@@ -995,6 +1036,12 @@ section#slider-2{
       }
     }
     .item{
+      @include sm{
+        text-align: center;
+      }
+      @include esm{
+        text-align: center;
+      }
       .item-img{
         width: 100%;
         @include md{
@@ -1005,29 +1052,54 @@ section#slider-2{
           max-width: 330px;
           margin: auto;
         }
+        @include esm{
+          width: 60%;
+          margin: auto;
+        }
+      }
+      h3{
+        font-size: 40px;
+        font-weight: 600;
+        @include md{
+          font-size: 30px;
+        }
+        @include esm{
+          font-size: 20px;
+        }
       }
       .item-text-1{
         color: $primary;
-        @include sm{
-          text-align: center;
+        font-weight: 500;
+        @include esm{
+          margin-top: 15px;
         }
+
       }
       .item-text-2{
         color: $secondary;
-        font-weight: 600;
-        @include sm{
-          text-align: center;
-        }
+
       }
       .item-text-3{
         color: $gray-600;
+        font-weight: 400;
+
         @include md{
           font-size: 13px;
+        }
+        @include esm{
+          font-size: 11px;
         }
       }
       .item-btn{
         padding: 10px;
-        font-size:13px
+        font-size:13px;
+        @include md{
+          padding: 5px;
+        }
+        @include esm{
+          padding: 5px;
+          font-size:12px;
+        }
       }
     }
     .slick-arrow{
@@ -1035,6 +1107,16 @@ section#slider-2{
       z-index: 3;
       width: 40px;
       height: 40px;
+      top: calc(50% - 50px);
+      @include md{
+        top: calc(50% - 10px);
+      }
+      @include esm{
+        top: calc(50% - 90px);
+        width: 30px;
+        height: 30px;
+
+      }
       &.slick-prev{
         left: 40px;
 
