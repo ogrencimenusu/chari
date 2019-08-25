@@ -1,13 +1,19 @@
 $(document).ready(function() {
+
     $(window).bind('scroll', function() {
         var navHeight = 1;
         if ($(window).scrollTop() > navHeight) {
-            $('header .navbar').addClass('fixed');
+            $('header#header-1 .navbar').addClass('fixed');
+            $('body#header-2 header').addClass('fixed');
         }
         else {
-            $('header .navbar').removeClass('fixed');
+            $('header#header-1 .navbar').removeClass('fixed');
+            $('body#header-2 header').removeClass('fixed');
         }
     });
+
+
+    /* Card */
     $(document).on('click', '.media-delete a', function(){
         var index = $(this).data('id')
         cartItemsDelete(index);

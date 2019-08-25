@@ -23,192 +23,222 @@
     <script src="assets/js/theme.js"></script>
 </head>
 
-<body>
-<header id="header-1">
-    <nav class="navbar navbar-expand-lg fixed-top">
+<body id="header-2">
+<header>
+    <div class="top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                Chari
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <i class='uil uil-bars'></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto menu">
-                    <li class="nav-item active">
-                        <div class="nav-link">HOME</div>
-                        <div class="custom-dropdown-menu">
-                            <div class="main-title">
-                                HOME PAGES.
-                            </div>
-                            <a href="index.html" class="list-item active">
-                                Slider 1
-                            </a>
-                            <a href="slider-2.html" class="list-item">
-                                Slider 2
-                            </a>
-                            <a href="slider-3.html" class="list-item">
-                                Slider 3
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item ">
-                        <div class="nav-link">PRODUCTS</div>
-                        <div class="custom-dropdown-menu">
-                            <div class="main-title">
-                                PRODUCTS PAGES.
-                            </div>
-                            <a href="product.html" class="list-item">
-                                Products List
-                            </a>
-                            <a href="product-detail.html" class="list-item">
-                                Product Details
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <div class="nav-link">BLOG</div>
-                        <div class="custom-dropdown-menu">
-                            <div class="main-title">
-                                BLOG PAGES.
-                            </div>
-                            <a href="blog.html" class="list-item">
-                                Blog List
-                            </a>
-                            <a href="blog-detail.html" class="list-item">
-                                Blog Details
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="404.html">404</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto menu-right ">
-                    <li class="nav-item">
-                        <div class="nav-link" >
-                            <i class='uil uil-shopping-cart-alt'>
-                                <span class="badges">2</span>
-                            </i>
-                            <div class="custom-dropdown-menu dropdown-cart">
-                                <div class="main-title">
-                                    MY CART.
-                                </div>
-                                <div class="item-wrap">
-                                    <p class="alert alert-secondary cart-null">Null Cart</p>
-                                    <div class="media" data-itemId="2">
-                                        <img class="media-img" src="assets/img/shopcart-2.jpg" alt="">
-                                        <div class="media-body">
-                                            <a class="title" href="">
-                                                Default Cart Item 2
-                                            </a>
-                                            <p>
+            <div class="row">
+                <div class="col-2 col-sm-2 col-lg-4 col-clock">
+                    <i class='uil uil-clock clock'></i>
+                    <p>
+                        WORK TİMES
+                        <span>
+                            Thu - Mon 8:00 - 18:00
+                        </span>
+                    </p>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class='uil uil-bars'></i>
+                    </button>
+                </div>
+                <div class="col-10 col-sm-7 col-lg-4 col-brand">
+                    <a class="navbar-brand" href="index.html">
+                        Chari
+                    </a>
+                </div>
+                <div class="col-12 col-sm-3 col-lg-4 col-menu-right">
+                    <ul class="navbar-nav menu-right ">
+                        <li class="nav-item">
+                            <div class="nav-link" >
+                                <i class='uil uil-shopping-cart-alt'>
+                                    <span class="badges">2</span>
+                                </i>
+                                <div class="custom-dropdown-menu dropdown-cart">
+                                    <div class="main-title">
+                                        MY CART.
+                                    </div>
+                                    <div class="item-wrap">
+                                        <p class="alert alert-secondary cart-null">Null Cart</p>
+                                        <div class="media" data-itemId="2">
+                                            <img class="media-img" src="assets/img/shopcart-2.jpg" alt="">
+                                            <div class="media-body">
+                                                <a class="title" href="">
+                                                    Default Cart Item 2
+                                                </a>
+                                                <p>
                                                 <span class="count">
                                                     <span class="count-number">1</span>
                                                     x
                                                 </span>
-                                                <span class="price">
+                                                    <span class="price">
                                                     $ <span class="price-number">
                                                         10
                                                     </span>
                                                 </span>
-                                                <span class="discount">
+                                                    <span class="discount">
                                                     -<span class="discount-number">15</span>
                                                     % discount
                                                 </span>
-                                            </p>
+                                                </p>
+                                            </div>
+                                            <div class="media-delete">
+                                                <a href="#0" data-id="2">
+                                                    <i class='uil uil-trash-alt'></i>
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="media-delete">
-                                            <a href="#0" data-id="2">
-                                                <i class='uil uil-trash-alt'></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="media" data-itemId="1">
-                                        <img class="media-img" src="assets/img/shopcart-1.jpg" alt="">
-                                        <div class="media-body">
-                                            <a class="title" href="">
-                                                Default Cart Item 1
-                                            </a>
-                                            <p>
+                                        <div class="media" data-itemId="1">
+                                            <img class="media-img" src="assets/img/shopcart-1.jpg" alt="">
+                                            <div class="media-body">
+                                                <a class="title" href="">
+                                                    Default Cart Item 1
+                                                </a>
+                                                <p>
                                                 <span class="count">
                                                     <span class="count-number">1</span>
                                                     x
                                                 </span>
-                                                <span class="price">
+                                                    <span class="price">
                                                     $ <span class="price-number">
                                                         20
                                                     </span>
                                                 </span>
-                                                <span class="discount">
+                                                    <span class="discount">
                                                     -<span class="discount-number">5</span>
                                                     % discount
                                                 </span>
-                                            </p>
-                                        </div>
-                                        <div class="media-delete">
-                                            <a href="#0" data-id="1">
-                                                <i class='uil uil-trash-alt'></i>
-                                            </a>
+                                                </p>
+                                            </div>
+                                            <div class="media-delete">
+                                                <a href="#0" data-id="1">
+                                                    <i class='uil uil-trash-alt'></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="total">
+                                        <hr>
+                                        <p>
+                                            Total: <span class="price">$ <span class="total-price-num">240.00</span></span>
+                                        </p>
+                                        <a href="#0" class="btn payment">
+                                            Proceed To Check Out
+                                        </a>
+                                        <a href="#0" class="btn viewcart">
+                                            Wiew Cart
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="total">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link" >
+                                <i class='uil uil-user'></i>
+                                <div class="custom-dropdown-menu">
+                                    <div class="main-title">
+                                        MY ACCOUNT.
+                                    </div>
+                                    <a href="#0" class="list-item">
+                                        <i class='uil uil-user-square'></i> Profile
+                                    </a>
+                                    <a href="#0" class="list-item">
+                                        <i class='uil uil-cog'></i> Settings
+                                    </a>
                                     <hr>
-                                    <p>
-                                        Total: <span class="price">$ <span class="total-price-num">240.00</span></span>
-                                    </p>
-                                    <a href="#0" class="btn payment">
-                                        Proceed To Check Out
-                                    </a>
-                                    <a href="#0" class="btn viewcart">
-                                        Wiew Cart
+                                    <a href="#0" class="list-item">
+                                        <i class='uil uil-sign-out-alt'></i> Sing - out
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="nav-link" >
-                            <i class='uil uil-user'></i>
-                            <div class="custom-dropdown-menu">
-                                <div class="main-title">
-                                    MY ACCOUNT.
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <i class='uil uil-search'></i>
+                                <div class="custom-dropdown-menu dropdown-search">
+                                    <div class="main-title">
+                                        SEARCH.
+                                    </div>
+                                    <form action="" class="form-search input-group">
+                                        <input placeholder="Search..."  class="form-control" type="text">
+                                        <button  class="btn btn-secondary" type="submit">GO!</button>
+                                    </form>
                                 </div>
-                                <a href="#0" class="list-item">
-                                    <i class='uil uil-user-square'></i> Profile
-                                </a>
-                                <a href="#0" class="list-item">
-                                    <i class='uil uil-cog'></i> Settings
-                                </a>
-                                <hr>
-                                <a href="#0" class="list-item">
-                                    <i class='uil uil-sign-out-alt'></i> Sing - out
-                                </a>
                             </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="nav-link">
-                            <i class='uil uil-search'></i>
-                            <div class="custom-dropdown-menu dropdown-search">
-                                <div class="main-title">
-                                    SEARCH.
-                                </div>
-                                <form action="" class="form-search input-group">
-                                    <input placeholder="Search..."  class="form-control" type="text">
-                                    <button  class="btn btn-secondary" type="submit">GO!</button>
-                                </form>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
         </div>
-    </nav>
+
+    </div>
+    <div class="down">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container">
+
+
+                        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                            <ul class="navbar-nav m-auto menu">
+                                <li class="nav-item active">
+                                    <div class="nav-link">HOME</div>
+                                    <div class="custom-dropdown-menu">
+                                        <div class="main-title">
+                                            HOME PAGES.
+                                        </div>
+                                        <a href="index.html" class="list-item active">
+                                            Slider 1
+                                        </a>
+                                        <a href="slider-2.html" class="list-item">
+                                            Slider 2
+                                        </a>
+                                        <a href="slider-3.html" class="list-item">
+                                            Slider 3
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">ABOUT</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <div class="nav-link">PRODUCTS</div>
+                                    <div class="custom-dropdown-menu">
+                                        <div class="main-title">
+                                            PRODUCTS PAGES.
+                                        </div>
+                                        <a href="product.html" class="list-item">
+                                            Products List
+                                        </a>
+                                        <a href="product-detail.html" class="list-item">
+                                            Product Details
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item ">
+                                    <div class="nav-link">BLOG</div>
+                                    <div class="custom-dropdown-menu">
+                                        <div class="main-title">
+                                            BLOG PAGES.
+                                        </div>
+                                        <a href="blog.html" class="list-item">
+                                            Blog List
+                                        </a>
+                                        <a href="blog-detail.html" class="list-item">
+                                            Blog Details
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="404.html">404</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
 </header>
 <main>
     <section id="slider">
