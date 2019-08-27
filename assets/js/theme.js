@@ -1,13 +1,28 @@
 $(document).ready(function() {
 
+
+
+    var numbertype = $(".numbertype");
+    $("#plus").click(function() {
+        var value =+numbertype.val();
+        numbertype.val(value + 1);
+    });
+    $("#minus").click(function() {
+        var value=numbertype.val();
+        numbertype.val(value - 1);
+        if (value < 2){
+            numbertype.val(1)
+        }
+    });
+
     $(window).bind('scroll', function() {
         var navHeight = 1;
         if ($(window).scrollTop() > navHeight) {
-            $('header#header-1 .navbar').addClass('fixed');
+            $('body#header-1 header .navbar').addClass('fixed');
             $('body#header-2 header').addClass('fixed');
         }
         else {
-            $('header#header-1 .navbar').removeClass('fixed');
+            $('body#header-1 header .navbar').removeClass('fixed');
             $('body#header-2 header').removeClass('fixed');
         }
     });
@@ -126,5 +141,36 @@ $(document).ready(function() {
 
     }, 30);
     /* Page 404 END ----------*/
+
+    $('#deals .deals-wrap').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+        nextArrow:'<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
 
 });

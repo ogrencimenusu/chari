@@ -24,14 +24,14 @@ body#header-2{
         .navbar{
           .nav-item{
             .nav-link{
-              padding: 5px 30px;
+              padding: 10px 30px;
             }
             .custom-dropdown-menu{
               top: 70px;
             }
             &:hover{
               .custom-dropdown-menu{
-                transform: translate(0, -36px);
+                transform: translate(0, -26px);
               }
             }
           }
@@ -44,6 +44,18 @@ body#header-2{
       .col-clock{
         display: flex;
         align-items: center;
+        justify-content: center;
+        @include elg{
+          justify-content: unset;
+        }
+        @include sm{
+          position: absolute;
+          top: 42px;
+        }
+        @include esm{
+          position: absolute;
+          top: 42px;
+        }
         .navbar-toggler{
           outline: 0;
           font-size: 25px;
@@ -241,6 +253,12 @@ body#header-2{
         width: 100%;
         padding: 0;
         li.nav-item{
+          &.active{
+            .nav-link{
+              color: $primary;
+            }
+          }
+
           .custom-dropdown-menu{
 
             @include lg{
@@ -285,6 +303,8 @@ body#header-2{
         .nav-link{
           padding: 20px 30px;
           @include transition(all ease 300ms);
+          color: $secondary;
+
 
           @include md{
             padding-bottom: 5px;
@@ -357,7 +377,7 @@ body#header-2{
             text-decoration: none;
             margin-top: 15px;
             color: $secondary;
-            &:hover{
+            &:hover,&.active{
               color: $primary;
             }
           }
@@ -471,5 +491,22 @@ body#header-2{
       }
     }
 
+  }
+  .page{
+    padding-top: 0;
+    .breadcrumb-wrap{
+      z-index:0;
+    }
+    &.page-404{
+      padding-top: 80px;
+    }
+  }
+  #slider-2{
+    margin-top: 0;
+    z-index: 0;
+  }
+  #slider-3{
+    margin-top: 0;
+    z-index: 0;
   }
 }

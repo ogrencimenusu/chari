@@ -23,7 +23,7 @@
     <script src="assets/js/theme.js"></script>
 </head>
 
-<body>
+<body id="header-1">
 <header>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -41,19 +41,20 @@
                             <div class="main-title">
                                 HOME PAGES.
                             </div>
-                            <a href="index.html" class="list-item">
+                            <a href="index.html" class="list-item active">
                                 Header 1
                             </a>
-                            <a href="../header-2/index-2.html" class="list-item">
+                            <a href="header2/index.html" class="list-item">
                                 Header 2
                             </a>
-                            <a href="index.html" class="list-item">
+                            <hr>
+                            <a href="index.html" class="list-item ">
                                 Slider 1
                             </a>
-                            <a href="slider-2.html" class="list-item">
+                            <a href="slider-2.html" class="list-item ">
                                 Slider 2
                             </a>
-                            <a href="slider-3.html" class="list-item">
+                            <a href="slider-3.html" class="list-item active">
                                 Slider 3
                             </a>
                         </div>
@@ -568,35 +569,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    $('#deals .deals-wrap').slick({
-                        infinite: false,
-                        slidesToShow: 4,
-                        slidesToScroll: 4,
-                        prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
-                        nextArrow:'<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
-                        responsive: [
-                            {
-                                breakpoint: 992,
-                                settings: {
-                                    slidesToShow: 3,
-                                }
-                            },
-                            {
-                                breakpoint: 768,
-                                settings: {
-                                    slidesToShow: 2,
-                                }
-                            },
-                            {
-                                breakpoint: 576,
-                                settings: {
-                                    slidesToShow: 1,
-                                }
-                            },
-                        ]
-                    });
-                </script>
             </div>
         </div>
     </section>
@@ -1157,16 +1129,6 @@
                     <li>
                         <a href="#0">
                             <img src="assets/img/payment-3.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <img src="assets/img/payment-4.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <img src="assets/img/payment-5.svg" alt="">
                         </a>
                     </li>
                 </ul>

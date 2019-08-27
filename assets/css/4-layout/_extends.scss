@@ -1,390 +1,392 @@
-header#header-1{
-  .navbar{
-    align-items: flex-start;
-    padding-bottom: 0;
-    padding-top: 0;
-    .navbar-brand{
-      font-size: 30px;
-      font-weight: bold;
-      color: $primary;
-    }
-    .navbar-toggler{
-      outline: 0;
-      font-size: 25px;
-      &[aria-expanded="true"]{
-        i{
-          @include transition(all ease 300ms);
-          &:before{
-            @include transition(all ease 300ms);
-            content: '\eaeb';
-          }
-        }
+body#header-1{
+  header{
+    .navbar{
+      align-items: flex-start;
+      padding-bottom: 0;
+      padding-top: 0;
+      .navbar-brand{
+        font-size: 30px;
+        font-weight: bold;
+        color: $primary;
       }
-    }
-    .navbar-collapse{
-      &.show, &.collapsing{
-        background: rgba($white,.95);
-      }
-      ul.navbar-nav{
-        &.menu{
-          @include md{
-            margin-top: 10px;
-            text-align: center;
-          }
-          @include sm{
-            margin-top: 10px;
-            text-align: center;
-          }
-          @include esm{
-            margin-top: 10px;
-            text-align: center;
-          }
-          li.nav-item{
+      .navbar-toggler{
+        outline: 0;
+        font-size: 25px;
+        &[aria-expanded="true"]{
+          i{
             @include transition(all ease 300ms);
-            .nav-link{
-              font-size: 16px;
-              font-weight: 500;
-              padding-right: 25px;
-              padding-left: 25px;
-              color: $secondary;
+            &:before{
               @include transition(all ease 300ms);
-              @include md{
-                padding: 0;
-                margin: 0;
-                padding-bottom: 10px;
-              }
-            }
-            &.active{
-              .nav-link{
-                color: $primary;
-                font-weight: bold;
-              }
+              content: '\eaeb';
             }
           }
         }
-        &.menu-right{
-          @include md{
-            justify-content: center;
-            flex-direction: row;
-          }
-          @include sm{
-            justify-content: center;
-            flex-direction: row;
-          }
-          @include esm{
-            justify-content: center;
-            flex-direction: row;
-          }
-          li.nav-item{
+      }
+      .navbar-collapse{
+        &.show, &.collapsing{
+          background: rgba($white,.95);
+        }
+        ul.navbar-nav{
+          &.menu{
             @include md{
-              position: unset;
+              margin-top: 10px;
+              text-align: center;
             }
             @include sm{
-              position: unset;
+              margin-top: 10px;
+              text-align: center;
             }
             @include esm{
-              position: unset;
+              margin-top: 10px;
+              text-align: center;
             }
-            .nav-link{
-              position: relative;
-              color: $secondary;
+            li.nav-item{
+              @include transition(all ease 300ms);
+              .nav-link{
+                font-size: 16px;
+                font-weight: 500;
+                padding-right: 25px;
+                padding-left: 25px;
+                color: $secondary;
+                @include transition(all ease 300ms);
+                @include md{
+                  padding: 0;
+                  margin: 0;
+                  padding-bottom: 10px;
+                }
+              }
+              &.active{
+                .nav-link{
+                  color: $primary;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+          &.menu-right{
+            @include md{
+              justify-content: center;
+              flex-direction: row;
+            }
+            @include sm{
+              justify-content: center;
+              flex-direction: row;
+            }
+            @include esm{
+              justify-content: center;
+              flex-direction: row;
+            }
+            li.nav-item{
               @include md{
                 position: unset;
-                margin: 0px 15px;
               }
               @include sm{
                 position: unset;
-                margin: 0px 15px;
               }
               @include esm{
                 position: unset;
-                margin: 0px 15px;
               }
-              i{
-                font-style: unset;
-                font-size: 22px;
+              .nav-link{
                 position: relative;
-                .badges{
-                  color: color(white);
-                  background: $primary;
-                  position: absolute;
-                  font-size: 12px;
-                  width: 20px;
-                  height: 20px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  @include border-radius(10px);
-                  top: -7px;
-                  right: -8px;
+                color: $secondary;
+                @include md{
+                  position: unset;
+                  margin: 0px 15px;
                 }
+                @include sm{
+                  position: unset;
+                  margin: 0px 15px;
+                }
+                @include esm{
+                  position: unset;
+                  margin: 0px 15px;
+                }
+                i{
+                  font-style: unset;
+                  font-size: 22px;
+                  position: relative;
+                  .badges{
+                    color: color(white);
+                    background: $primary;
+                    position: absolute;
+                    font-size: 12px;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include border-radius(10px);
+                    top: -7px;
+                    right: -8px;
+                  }
 
+                }
               }
             }
           }
-        }
-        li.nav-item{
-          cursor: pointer;
-          position: relative;
-          .nav-link{
-            padding-bottom: 20px;
-            padding-top: 20px;
-            @include md{
-              padding-bottom: 5px;
-              padding-top: 5px;
+          li.nav-item{
+            cursor: pointer;
+            position: relative;
+            .nav-link{
+              padding-bottom: 20px;
+              padding-top: 20px;
+              @include md{
+                padding-bottom: 5px;
+                padding-top: 5px;
+              }
+              @include sm{
+                padding-bottom: 5px;
+                padding-top: 5px;
+              }
+              @include esm{
+                padding-bottom: 5px;
+                padding-top: 5px;
+              }
             }
-            @include sm{
-              padding-bottom: 5px;
-              padding-top: 5px;
-            }
-            @include esm{
-              padding-bottom: 5px;
-              padding-top: 5px;
-            }
-          }
-          .custom-dropdown-menu{
-            text-align: left;
-            z-index: 1;
-            top: 54px;
-            visibility: hidden;
-            display: unset;
-            opacity: 0;
-            @include transition(all ease 300ms);
-            width: 200px;
-            position: absolute;
-            left: calc(50% - 100px);
-            background: $white;
-            padding: 20px;
-            @include border-radius(5px);
-            @extend .animated;
-            @extend .shadow-sm;
-            transform: translate(0, 30px);
-            @include md{
-              display: none;
-              left: 0;
-              width: calc(100% - 48px);
-              top: unset;
-              margin-top: -5px;
-              margin-left: 24px;
-              border-radius: 0;
-            }
-            @include sm{
-              display: none;
-              left: 0;
-              width: calc(100% - 36px);
-              top: unset;
-              margin-top: -5px;
-              margin-left: 18px;
-              border-radius: 0;
-            }
-            @include esm{
-              display: none;
-              left: 0;
-              width: calc(100% - 32px);
-              top: unset;
-              margin-top: -5px;
-              margin-left: 16px;
-              border-radius: 0;
-              max-height: 220px;
-              overflow: auto;
-            }
-            &.dropdown-cart{
-              width: 300px;
-              left: calc(50% - 150px);
-            }
-            &:before{
-              content: '';
-              width: 12px;
-              height: 12px;
-              @include border-radius(2px);
-              @include transform(rotate(45deg));
-              background: $white;
+            .custom-dropdown-menu{
+              text-align: left;
+              z-index: 1;
+              top: 54px;
+              visibility: hidden;
+              display: unset;
+              opacity: 0;
+              @include transition(all ease 300ms);
+              width: 200px;
               position: absolute;
-              top: -6px;
-              left: calc(50% - 6px);
-              @include lg{
+              left: calc(50% - 100px);
+              background: $white;
+              padding: 20px;
+              @include border-radius(5px);
+              @extend .animated;
+              @extend .shadow-sm;
+              transform: translate(0, 30px);
+              @include md{
                 display: none;
+                left: 0;
+                width: calc(100% - 48px);
+                top: unset;
+                margin-top: -5px;
+                margin-left: 24px;
+                border-radius: 0;
               }
-            }
-            @include lg{
-              left: calc(50% - 208px) !important;
-            }
-
-            .form-search{
-              .btn{
-                @include border-radius(0px 4px 4px 0px);
+              @include sm{
+                display: none;
+                left: 0;
+                width: calc(100% - 36px);
+                top: unset;
+                margin-top: -5px;
+                margin-left: 18px;
+                border-radius: 0;
               }
-            }
-            hr{
-              margin:5px 0px 0px 0px;
-            }
-            .list-item{
-              display: block;
-              text-decoration: none;
-              margin-top: 15px;
-              color: $secondary;
-              &:hover{
-                color: $primary;
+              @include esm{
+                display: none;
+                left: 0;
+                width: calc(100% - 32px);
+                top: unset;
+                margin-top: -5px;
+                margin-left: 16px;
+                border-radius: 0;
+                max-height: 220px;
+                overflow: auto;
               }
-            }
-            .main-title{
-              font-size: 14px;
-              color: $primary;
-              position: relative;
-              font-weight: 500;
-              padding-bottom: 4px;
-              margin-bottom: 10px;
+              &.dropdown-cart{
+                width: 300px;
+                left: calc(50% - 150px);
+              }
               &:before{
                 content: '';
-                width: 24px;
-                height: 2px;
-                background: $primary;
-                display: block;
+                width: 12px;
+                height: 12px;
+                @include border-radius(2px);
+                @include transform(rotate(45deg));
+                background: $white;
                 position: absolute;
-                bottom: 0;
-                font-weight: 600;
+                top: -6px;
+                left: calc(50% - 6px);
+                @include lg{
+                  display: none;
+                }
               }
-            }
-            .item-wrap{
-              overflow: auto;
-              max-height: 300px ;
-              p.cart-null{
-                display: none;
+              @include lg{
+                left: calc(50% - 208px) !important;
               }
 
-              .media{
+              .form-search{
+                .btn{
+                  @include border-radius(0px 4px 4px 0px);
+                }
+              }
+              hr{
+                margin:5px 0px 0px 0px;
+              }
+              .list-item{
+                display: block;
+                text-decoration: none;
+                margin-top: 15px;
+                color: $secondary;
+                &:hover,&.active{
+                  color: $primary;
+                }
+              }
+              .main-title{
+                font-size: 14px;
+                color: $primary;
+                position: relative;
+                font-weight: 500;
+                padding-bottom: 4px;
                 margin-bottom: 10px;
-                padding: 3px 3px;
-                @include border-radius(4px);
-                &:hover{
-                  background: $gray-100;
+                &:before{
+                  content: '';
+                  width: 24px;
+                  height: 2px;
+                  background: $primary;
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  font-weight: 600;
                 }
-                .media-img{
-                  margin-right: 10px;
-                  @include border-radius(5px);
-                  width: 50px;
-                  height: 50px;
+              }
+              .item-wrap{
+                overflow: auto;
+                max-height: 300px ;
+                p.cart-null{
+                  display: none;
                 }
-                .media-body{
-                  .title{
-                    font-size: 11px;
-                    font-weight: 500;
-                    text-decoration: none;
-                    display: block;
-                    color: $secondary;
+
+                .media{
+                  margin-bottom: 10px;
+                  padding: 3px 3px;
+                  @include border-radius(4px);
+                  &:hover{
+                    background: $gray-100;
                   }
-                  p{
-                    margin-top: 5px;
-                    font-size: 12px;
-                    .count{
-                      color: $gray-500;
-                    }
-                    .price{
+                  .media-img{
+                    margin-right: 10px;
+                    @include border-radius(5px);
+                    width: 50px;
+                    height: 50px;
+                  }
+                  .media-body{
+                    .title{
+                      font-size: 11px;
+                      font-weight: 500;
+                      text-decoration: none;
+                      display: block;
                       color: $secondary;
                     }
-                    .discount{
-                      display: block;
-                      color: $danger;
+                    p{
+                      margin-top: 5px;
+                      font-size: 12px;
+                      .count{
+                        color: $gray-500;
+                      }
+                      .price{
+                        color: $secondary;
+                      }
+                      .discount{
+                        display: block;
+                        color: $danger;
+                      }
+                    }
+                  }
+                  .media-delete{
+                    a{
+                      color: $secondary;
+                      i{
+                        font-size: 20px;
+                      }
+                      &:hover{
+                        color: $primary;
+                      }
                     }
                   }
                 }
-                .media-delete{
-                  a{
+              }
+              .total{
+                hr{
+                  width: 100%;
+                  margin-top: 0;
+                  margin-bottom: 10px;
+                }
+                .btn{
+                  font-size: 13px;
+                  text-align: center;
+                  display: block;
+                  &.payment{
+                    background: $black;
+                    color: $white;
+                    margin: auto;
+                    margin-bottom: 5px;
+                  }
+                }
+                p{
+                  font-weight: 500;
+                  .price{
+                    font-weight: 600;
                     color: $secondary;
-                    i{
-                      font-size: 20px;
-                    }
-                    &:hover{
-                      color: $primary;
-                    }
                   }
                 }
               }
             }
-            .total{
-              hr{
-                width: 100%;
-                margin-top: 0;
-                margin-bottom: 10px;
-              }
-              .btn{
-                font-size: 13px;
-                text-align: center;
-                display: block;
-                &.payment{
-                  background: $black;
-                  color: $white;
-                  margin: auto;
-                  margin-bottom: 5px;
+            &:hover{
+              .custom-dropdown-menu{
+                transform: translate(0, 10px);
+                opacity: 1;
+                visibility: visible;
+                @include md{
+                  display: unset;
+                  width: calc(100% - 32px);
+                  left: 0;
                 }
-              }
-              p{
-                font-weight: 500;
-                .price{
-                  font-weight: 600;
-                  color: $secondary;
+                @include sm{
+                  width: calc(100% - 32px);
+                  left: 0;
+                  display: unset;
                 }
-              }
-            }
-          }
-          &:hover{
-            .custom-dropdown-menu{
-              transform: translate(0, 10px);
-              opacity: 1;
-              visibility: visible;
-              @include md{
-                display: unset;
-                width: calc(100% - 32px);
-                left: 0;
-              }
-              @include sm{
-                width: calc(100% - 32px);
-                left: 0;
-                display: unset;
-              }
-              @include esm{
-                width: calc(100% - 32px);
-                left: 0;
-                display: unset;
+                @include esm{
+                  width: calc(100% - 32px);
+                  left: 0;
+                  display: unset;
+                }
               }
             }
           }
         }
+
+
       }
+      @include transition(all ease 300ms);
+      &.fixed{
+        background: rgba($white,.95);
+        @include box-shadow(0px 0px 21px -18px #333);
 
-
-    }
-    @include transition(all ease 300ms);
-    &.fixed{
-      background: rgba($white,.95);
-      @include box-shadow(0px 0px 21px -18px #333);
-
-      .navbar-collapse{
-        &.collapsing,&.show{
-          @include md{
-            background: transparent;
+        .navbar-collapse{
+          &.collapsing,&.show{
+            @include md{
+              background: transparent;
+            }
+            @include sm{
+              background: transparent;
+            }
+            @include esm{
+              background: transparent;
+            }
           }
-          @include sm{
-            background: transparent;
-          }
-          @include esm{
-            background: transparent;
-          }
-        }
-        .navbar-nav{
-          li.nav-item{
-            .custom-dropdown-menu{
-              @include md{
-                margin-left: 0;
-                width: 100% ;
-              }
-              @include sm{
-                margin-left: 0;
-                width: 100% ;
-              }
-              @include esm{
-                margin-left: 0;
-                width: 100% ;
+          .navbar-nav{
+            li.nav-item{
+              .custom-dropdown-menu{
+                @include md{
+                  margin-left: 0;
+                  width: 100% ;
+                }
+                @include sm{
+                  margin-left: 0;
+                  width: 100% ;
+                }
+                @include esm{
+                  margin-left: 0;
+                  width: 100% ;
+                }
               }
             }
           }
