@@ -256,7 +256,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="img-slider col-10 mx-auto col-sm-9">
+                        <div class="img-slider col-7 mx-auto col-sm-9">
                             <div class="slider slider-for">
                                 <div class="slider-item">
                                     <img src="assets/img/product-1.jpg" alt="">
@@ -285,15 +285,10 @@
                                 slidesToShow: 1,
                                 slidesToScroll: 1,
                                 fade: true,
-                                prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
-                                nextArrow:'<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
                                 asNavFor: '.slider-nav',
 
                             });
                             $('.slider-nav').slick({
-                                prevArrow:'<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
-                                nextArrow:'<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
-
                                 slidesToShow: 4,
                                 asNavFor: '.slider-for',
                                 focusOnSelect: true,
@@ -305,10 +300,11 @@
                                         breakpoint: 576,
                                         settings: {
                                             slidesToScroll: 1,
-                                            focusOnSelect: false,
+                                            focusOnSelect: true,
                                             slidesToShow: 3,
                                             vertical: false,
                                             verticalSwiping: false,
+                                            infinite:false,
 
                                         }
                                     },

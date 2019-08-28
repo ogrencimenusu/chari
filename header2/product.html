@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Product List Grid</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="../assets/css/theme.css">
+
+    <!-- build:js -->
+    <script src="../assets/js/main.js"></script>
+    <!-- endbuild -->
+
+    <script src="../assets/js/theme.js"></script>
+</head>
+<body id="header-2">
+<header>
+    <div class="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 col-sm-2 col-lg-4 col-clock">
+                    <i class='uil uil-clock clock'></i>
+                    <p>
+                        WORK TİMES
+                        <span>
+                            Thu - Mon 8:00 - 18:00
+                        </span>
+                    </p>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class='uil uil-bars'></i>
+                    </button>
+                </div>
+                <div class="col-10 col-sm-7 col-lg-4 col-brand">
+                    <a class="navbar-brand" href="index.html">
+                        Chari
+                    </a>
+                </div>
+                <div class="col-12 col-sm-3 col-lg-4 col-menu-right">
+                    <ul class="navbar-nav menu-right ">
+                        <li class="nav-item">
+                            <div class="nav-link" >
+                                <i class='uil uil-shopping-cart-alt'>
+                                    <span class="badges">2</span>
+                                </i>
+                                <div class="custom-dropdown-menu dropdown-cart">
+                                    <div class="main-title">
+                                        MY CART.
+                                    </div>
+                                    <div class="item-wrap">
+                                        <p class="alert alert-secondary cart-null">Null Cart</p>
+                                        <div class="media" data-itemId="2">
+                                            <img class="media-img" src="../../../assets/img/shopcart-2.jpg" alt="">
+                                            <div class="media-body">
+                                                <a class="title" href="">
+                                                    Default Cart Item 2
+                                                </a>
+                                                <p>
+                                                <span class="count">
+                                                    <span class="count-number">1</span>
+                                                    x
+                                                </span>
+                                                    <span class="price">
+                                                    $ <span class="price-number">
+                                                        10
+                                                    </span>
+                                                </span>
+                                                    <span class="discount">
+                                                    -<span class="discount-number">15</span>
+                                                    % discount
+                                                </span>
+                                                </p>
+                                            </div>
+                                            <div class="media-delete">
+                                                <a href="#0" data-id="2">
+                                                    <i class='uil uil-trash-alt'></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="media" data-itemId="1">
+                                            <img class="media-img" src="../../../assets/img/shopcart-1.jpg" alt="">
+                                            <div class="media-body">
+                                                <a class="title" href="">
+                                                    Default Cart Item 1
+                                                </a>
+                                                <p>
+                                                <span class="count">
+                                                    <span class="count-number">1</span>
+                                                    x
+                                                </span>
+                                                    <span class="price">
+                                                    $ <span class="price-number">
+                                                        20
+                                                    </span>
+                                                </span>
+                                                    <span class="discount">
+                                                    -<span class="discount-number">5</span>
+                                                    % discount
+                                                </span>
+                                                </p>
+                                            </div>
+                                            <div class="media-delete">
+                                                <a href="#0" data-id="1">
+                                                    <i class='uil uil-trash-alt'></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="total">
+                                        <hr>
+                                        <p>
+                                            Total: <span class="price">$ <span class="total-price-num">240.00</span></span>
+                                        </p>
+                                        <a href="#0" class="btn payment">
+                                            Proceed To Check Out
+                                        </a>
+                                        <a href="#0" class="btn viewcart">
+                                            Wiew Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link" >
+                                <i class='uil uil-user'></i>
+                                <div class="custom-dropdown-menu">
+                                    <div class="main-title">
+                                        MY ACCOUNT.
+                                    </div>
+                                    <a href="#0" class="list-item">
+                                        <i class='uil uil-user-square'></i> Profile
+                                    </a>
+                                    <a href="#0" class="list-item">
+                                        <i class='uil uil-cog'></i> Settings
+                                    </a>
+                                    <hr>
+                                    <a href="#0" class="list-item">
+                                        <i class='uil uil-sign-out-alt'></i> Sing - out
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">
+                                <i class='uil uil-search'></i>
+                                <div class="custom-dropdown-menu dropdown-search">
+                                    <div class="main-title">
+                                        SEARCH.
+                                    </div>
+                                    <form action="" class="form-search input-group">
+                                        <input placeholder="Search..."  class="form-control" type="text">
+                                        <button  class="btn btn-secondary" type="submit">GO!</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="down">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container">
+                        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                            <ul class="navbar-nav m-auto menu">
+                                <li class="nav-item">
+                                    <div class="nav-link ">HOME</div>
+                                    <div class="custom-dropdown-menu">
+                                        <div class="main-title">
+                                            HOME PAGES.
+                                        </div>
+                                        <a href="../index.html" class="list-item ">
+                                            Header 1
+                                        </a>
+                                        <a href="index.html" class="list-item">
+                                            Header 2
+                                        </a>
+                                        <hr>
+                                        <a href="index.html" class="list-item">
+                                            Slider 1
+                                        </a>
+                                        <a href="slider-2.html" class="list-item">
+                                            Slider 2
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">ABOUT</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <div class="nav-link">PRODUCTS</div>
+                                    <div class="custom-dropdown-menu">
+                                        <div class="main-title">
+                                            PRODUCTS PAGES.
+                                        </div>
+                                        <a href="product.html" class="list-item active">
+                                            Products List
+                                        </a>
+                                        <a href="product-detail.html" class="list-item">
+                                            Product Details
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item ">
+                                    <div class="nav-link">BLOG</div>
+                                    <div class="custom-dropdown-menu">
+                                        <div class="main-title">
+                                            BLOG PAGES.
+                                        </div>
+                                        <a href="blog.html" class="list-item">
+                                            Blog List
+                                        </a>
+                                        <a href="blog-detail.html" class="list-item">
+                                            Blog Details
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="404.html">404</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>
+<main class="page page-product">
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <nav>
+                    <h3 class="breadcrumb-title">Products</h3>
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Products</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="row">
+                    <div class="box">
+                        <div class="title">
+                            CATEGORIES
+                        </div>
+                        <a class="box-link" href="#0">
+                            Privacy Policy
+                        </a>
+                        <a class="box-link" href="#0">
+                            Donor Privacy Policy
+                        </a>
+                        <a class="box-link" href="#0">
+                            Disclaimer
+                        </a>
+                        <a class="box-link" href="#0">
+                            Terms of Use
+                        </a>
+                        <a class="box-link" href="#0">
+                            Copyright Notice
+                        </a>
+                        <a class="box-link" href="#0">
+                            Media Center
+                        </a>
+                        <hr>
+                    </div>
+                    <div class="box">
+                        <div class="title">
+                            COLOR
+                        </div>
+                        <a class="box-link" href="#0">
+                            Red
+                            <span class="badges">
+                                2
+                            </span>
+                        </a>
+                        <a class="box-link" href="#0">
+                            Blue
+                            <span class="badges">
+                                2
+                            </span>
+                        </a>
+                        <a class="box-link" href="#0">
+                            Black
+                            <span class="badges">
+                                3
+                            </span>
+                        </a>
+                        <a class="box-link" href="#0">
+                            Yellow
+                            <span class="badges">
+                                10
+                            </span>
+                        </a>
+                        <hr>
+                    </div>
+                    <div class="box box-price">
+                        <div class="title">
+                            PRICE
+                        </div>
+                        <form action="">
+                            <input id="price" type="text"/>
+                            <div class="input-group">
+                                <input type="number" class="form-control input-min-val" value="0">
+                                <input type="number" class="form-control input-max-val" value="1000">
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                FILTER
+                            </button>
+                        </form>
+                        <hr>
+                        <script>
+                            var $d4 = $("#price");
+                            $d4.ionRangeSlider({
+                                type: "double",
+                                grid: false,
+                                min: 0,
+                                max: 1000,
+                                from: 0,
+                                prefix: "$ "
+                            });
+                            $d4.on("change", function () {
+                                var $inp = $(this);
+                                var v = $inp.prop("value");     // input value in format FROM;TO
+                                var from = $inp.data("from");   // input data-from attribute
+                                var to = $inp.data("to");       // input data-to attribute
+                                $('input.input-min-val').val(from);
+                                $('input.input-max-val').val(to);
+                            });
+                        </script>
+                    </div>
+                    <div class="box box-popular">
+                        <div class="title">
+                            MOST POPULAR
+                        </div>
+                        <div class="media">
+                            <img src="../assets/img/product-1.jpg" alt="">
+                            <div class="media-body">
+                                <a class="media-link" href="">
+                                    Design Requirements
+                                </a>
+                                <span class="price">
+                                    $25.00
+                                </span>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img src="../assets/img/product-2.jpg" alt="">
+                            <div class="media-body">
+                                <a class="media-link" href="">
+                                    Design Requirements
+                                </a>
+                                <span class="price">
+                                    $25.00
+                                </span>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img src="../assets/img/product-3.jpg" alt="">
+                            <div class="media-body">
+                                <a class="media-link" href="">
+                                    Design Requirements
+                                </a>
+                                <span class="price">
+                                    $25.00
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row products-wrap">
+                    <div class="sale-product">
+                        <h2>
+                            SALE <span>%50</span> OFF
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <a href="" class="btn btn-secondary">
+                            SHOP NOW
+                        </a>
+                        <img src="../assets/img/sale-product.png" alt="">
+                    </div>
+                    <div class="shorting">
+
+                        <div class="col-12 col-sm-4 col-lg-2">
+                            <div class="wrap-title">
+                                SHOP
+                            </div>
+                        </div>
+                        <div class="col-12 offset-lg-3 col-sm-8 col-lg-7">
+                            <div class="wrap-listing">
+                                <div class="short">
+                                    <label for="ordering">
+                                        Sort By
+                                    </label>
+                                    <select class="form-control" name="" id="ordering">
+                                        <option value="">By name (A-Z)</option>
+                                        <option value="">By name (Z-A)</option>
+                                    </select>
+                                </div>
+                                <div class="grid">
+                                    <a href="product.html">
+                                        <i class='uil uil-apps'></i>
+                                    </a>
+                                    <a href="product-line.html">
+                                        <i class='uil uil-window-maximize'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="../assets/img/trend-1.jpg" alt="">
+                                <div class="left-fix">
+                                    <div class="discount">
+                                        -15%
+                                    </div>
+                                    <div class="new">
+                                        NEW
+                                    </div>
+                                </div>
+                                <div class="trans">
+                                    <a
+                                            href="#0"
+                                            class="addCartItem"
+                                            data-img="trend-1.jpg"
+                                            data-title="Most Item 1"
+                                            data-price="100.00"
+                                            data-count="1"
+                                            data-discount="15"
+                                            data-id="21"
+                                    >
+                                        <i class="fas fa-cart-plus"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="price">
+                                    <a href="product-detail.html" class="title">
+                                        Most Item 1
+                                    </a>
+                                    <div class="new-price">
+                                        $100.00
+                                    </div>
+                                    <div class="old-price">
+                                        $120.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="../assets/img/trend-2.jpg" alt="">
+                                <div class="left-fix">
+                                    <div class="discount">
+                                        -25%
+                                    </div>
+                                    <div class="new">
+                                        NEW
+                                    </div>
+                                </div>
+                                <div class="trans">
+                                    <a
+                                            href="#0"
+                                            class="addCartItem"
+                                            data-img="trend-2.jpg"
+                                            data-title="Most Item 2"
+                                            data-price="200.00"
+                                            data-count="1"
+                                            data-discount="25"
+                                            data-id="22"
+                                    >
+                                        <i class="fas fa-cart-plus"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="price">
+                                    <a href="product-detail.html" class="title">
+                                        Most Item 2
+                                    </a>
+                                    <div class="new-price">
+                                        $200.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="../assets/img/trend-3.jpg" alt="">
+                                <div class="left-fix">
+                                    <div class="discount">
+                                        -35%
+                                    </div>
+                                    <div class="new">
+                                        NEW
+                                    </div>
+                                </div>
+                                <div class="trans">
+                                    <a
+                                            href="#0"
+                                            class="addCartItem"
+                                            data-img="trend-3.jpg"
+                                            data-title="Most Item 3"
+                                            data-price="300.00"
+                                            data-count="1"
+                                            data-discount="35"
+                                            data-id="23"
+                                    >
+                                        <i class="fas fa-cart-plus"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="price">
+                                    <a href="product-detail.html" class="title">
+                                        Most Item 3
+                                    </a>
+                                    <div class="new-price">
+                                        $300.00
+                                    </div>
+                                    <div class="old-price">
+                                        $130.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="../assets/img/trend-4.jpg" alt="">
+                                <div class="left-fix">
+                                    <div class="discount">
+                                        -45%
+                                    </div>
+                                    <div class="new">
+                                        NEW
+                                    </div>
+                                </div>
+                                <div class="trans">
+                                    <a
+                                            href="#0"
+                                            class="addCartItem"
+                                            data-img="trend-4.jpg"
+                                            data-title="Most Item 4"
+                                            data-price="400.00"
+                                            data-count="1"
+                                            data-discount="45"
+                                            data-id="24"
+                                    >
+                                        <i class="fas fa-cart-plus"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="price">
+                                    <a href="product-detail.html" class="title">
+                                        Most Item 4
+                                    </a>
+                                    <div class="new-price">
+                                        $400.00
+                                    </div>
+                                    <div class="old-price">
+                                        $140.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="../assets/img/trend-5.jpg" alt="">
+                                <div class="left-fix">
+                                    <div class="discount">
+                                        -55%
+                                    </div>
+                                    <div class="new">
+                                        NEW
+                                    </div>
+                                </div>
+                                <div class="trans">
+                                    <a
+                                            href="#0"
+                                            class="addCartItem"
+                                            data-img="trend-5.jpg"
+                                            data-title="Most Item 5"
+                                            data-price="500.00"
+                                            data-count="1"
+                                            data-discount="55"
+                                            data-id="25"
+                                    >
+                                        <i class="fas fa-cart-plus"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="price">
+                                    <a href="product-detail.html" class="title">
+                                        Most Item 5
+                                    </a>
+                                    <div class="new-price">
+                                        $500.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="../assets/img/trend-6.jpg" alt="">
+                                <div class="left-fix">
+                                    <div class="discount">
+                                        -65%
+                                    </div>
+                                    <div class="new">
+                                        NEW
+                                    </div>
+                                </div>
+                                <div class="trans">
+                                    <a
+                                            href="#0"
+                                            class="addCartItem"
+                                            data-img="trend-6.jpg"
+                                            data-title="Most Item 6"
+                                            data-price="600.00"
+                                            data-count="1"
+                                            data-discount="65"
+                                            data-id="26"
+                                    >
+                                        <i class="fas fa-cart-plus"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="price">
+                                    <a href="product-detail.html" class="title">
+                                        Most Item 6
+                                    </a>
+                                    <div class="new-price">
+                                        $600.00
+                                    </div>
+                                    <div class="old-price">
+                                        $800.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <i class='uil uil-arrow-right'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-4">
+                <div class="footer-box footer-brand">
+                    <a class="brand" href="index.html">
+                        Chari
+                    </a>
+                    <p class="address">
+                        Address : No 40 Baria Sreet 15/2 NewYork City,
+                        NY, United States.
+                        <br>
+                        Email : <a href="">uijungle@email.com</a>
+                        <br>
+                        Phone : <a href="">+ 123 456 7890</a>
+                    </p>
+                    <ul class="social">
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 ml-sm-auto">
+                <div class="footer-box quick-links">
+                    <div class="title">
+                        Useful Links
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#0">
+                                Terms & condition
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                Sitemap
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 ">
+                <div class="footer-box quick-links">
+                    <div class="title">
+                        Account
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#0">
+                                My account
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                Order history
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                Shipping & Delivery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                Returns & Exchanges
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                Help
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                Site Map
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr >
+            <div class="copyright col-sm-6">
+                <div class="row">
+                    © Copyright <a href="#0">Chari</a> 2019. All right reserved.
+                </div>
+            </div>
+            <div class="payment col">
+                <ul class="row">
+                    <li>
+                        <a href="#0">
+                            <img src="../assets/img/payment-1.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <img src="../assets/img/payment-2.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <img src="../assets/img/payment-3.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <img src="../assets/img/payment-4.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <img src="../assets/img/payment-5.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
