@@ -119,6 +119,7 @@
         .media{
           margin-top: 20px;
           align-items: center;
+          margin-bottom: 0px !important;
           img{
             width: 100px;
             margin-right: 25px;
@@ -143,24 +144,129 @@
     }
 
     &.page-blog-list{
-      .clock{
-        position: relative;
-        height: 100%;
-        &:before{
-          content: '';
-          height: 50%;
-          top: 0;
-          width: 2px;
-          background: red;
-          position: absolute;
-        }
-        &:after{
-          content: '';
-          height: 50%;
-          bottom: 0;
-          width: 2px;
-          background: red;
-          position: absolute;
+      .items-wrap{
+        .media{
+          margin-bottom: 50px;
+          @include esm{
+            display: block;
+          }
+          .img{
+            position: relative;
+            margin-left: 40px;
+            @include esm{
+              text-align: center;
+              margin: auto;
+              margin-bottom: 15px;
+
+            }
+            .clock{
+              position: absolute;
+              height: 100%;
+              width: 1px;
+              display: flex;
+              align-items: center;
+              left: -40px;
+              color: $gray-600;
+              &:before{
+                content: '';
+                height: 50%;
+                top: 0;
+                width: 2px;
+                background: $gray-300;
+                position: absolute;
+              }
+              &:after{
+                content: '';
+                height: 50%;
+                bottom: 0;
+                width: 2px;
+                background: $gray-300;
+                position: absolute;
+              }
+              p{
+                background: white;
+                left: -10px;
+                position: relative;
+                z-index: 1;
+                padding: 10px 0px;
+                margin-bottom: 0;
+                text-align: center;
+                i{
+                  &:before{
+                    font-size: 30px;
+                    margin: 0;
+                  }
+                }
+                span{
+
+                }
+              }
+            }
+            img{
+              width: 173px;
+              @include border-radius($border-radius);
+              border: 1px solid $gray-400;
+              margin-right: 15px;
+              @include esm{
+                margin: auto;
+                display: block;
+              }
+            }
+          }
+          .detail{
+            @include esm{
+              border-bottom: 1px solid $gray-400;
+              padding: 5px 15px;
+              text-align: center;
+            }
+            .detail-info{
+              display: flex;
+              justify-content: space-between;
+              @include sm{
+                display: block;
+                overflow: hidden;
+              }
+              @include esm{
+                display: block;
+                overflow: hidden;
+              }
+              a{
+                color: rgba($secondary,.7);
+                @include sm{
+                  width: 50%;
+                  float: left;
+                  display: block;
+                }
+                @include esm{
+                  display: block;
+                  margin: 0px 10px;
+                  float: left;
+                }
+              }
+            }
+            .title{
+              margin: 15px 0px;
+              font-size: 30px;
+              @include sm{
+                font-size: 20px;
+              }
+              @include esm{
+                font-size: 20px;
+              }
+            }
+            p{
+              font-size: 13px;
+            }
+            a.btn{
+              color: $white;
+              @include box-shadow(unset);
+              background: $secondary;
+              &:hover{
+                background: $primary;
+                color: $white;
+              }
+            }
+          }
         }
       }
     }
@@ -194,6 +300,7 @@
         }
       }
       .detail-media{
+
         .title{
           font-weight: 600;
           font-size: 30px;

@@ -35122,6 +35122,7 @@ section#newsletter .news-form .btn:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 0px !important;
 }
 
 .page.page-blog .blog-rb.recent-post .media img {
@@ -35145,27 +35146,173 @@ section#newsletter .news-form .btn:hover {
   color: #ced4da;
 }
 
-.page.page-blog.page-blog-list .clock {
-  position: relative;
-  height: 100%;
+.page.page-blog.page-blog-list .items-wrap .media {
+  margin-bottom: 50px;
 }
 
-.page.page-blog.page-blog-list .clock:before {
+@media (max-width: 575.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media {
+    display: block;
+  }
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .img {
+  position: relative;
+  margin-left: 40px;
+}
+
+@media (max-width: 575.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .img {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .img .clock {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  left: -40px;
+  color: #6c757d;
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .img .clock:before {
   content: '';
   height: 50%;
   top: 0;
   width: 2px;
-  background: red;
+  background: #dee2e6;
   position: absolute;
 }
 
-.page.page-blog.page-blog-list .clock:after {
+.page.page-blog.page-blog-list .items-wrap .media .img .clock:after {
   content: '';
   height: 50%;
   bottom: 0;
   width: 2px;
-  background: red;
+  background: #dee2e6;
   position: absolute;
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .img .clock p {
+  background: white;
+  left: -10px;
+  position: relative;
+  z-index: 1;
+  padding: 10px 0px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .img .clock p i:before {
+  font-size: 30px;
+  margin: 0;
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .img img {
+  width: 173px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  margin-right: 15px;
+}
+
+@media (max-width: 575.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .img img {
+    margin: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .detail {
+    border-bottom: 1px solid #ced4da;
+    padding: 5px 15px;
+    text-align: center;
+  }
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .detail .detail-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .detail .detail-info {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .detail .detail-info {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .detail .detail-info a {
+  color: rgba(30, 47, 79, 0.7);
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .detail .detail-info a {
+    width: 50%;
+    float: left;
+    display: block;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .detail .detail-info a {
+    display: block;
+    margin: 0px 10px;
+    float: left;
+  }
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .detail .title {
+  margin: 15px 0px;
+  font-size: 30px;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .detail .title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page.page-blog.page-blog-list .items-wrap .media .detail .title {
+    font-size: 20px;
+  }
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .detail p {
+  font-size: 13px;
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .detail a.btn {
+  color: #fff;
+  -webkit-box-shadow: unset;
+  -o-box-shadow: unset;
+  box-shadow: unset;
+  background: #1E2F4F;
+}
+
+.page.page-blog.page-blog-list .items-wrap .media .detail a.btn:hover {
+  background: #EE8139;
+  color: #fff;
 }
 
 .page.page-blog.page-blog_detail .detail-head .main-img {
