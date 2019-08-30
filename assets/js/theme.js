@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-
-
     var numbertype = $(".numbertype");
     $("#plus").click(function() {
         var value =+numbertype.val();
@@ -15,17 +13,35 @@ $(document).ready(function() {
         }
     });
 
+
+
     $(window).bind('scroll', function() {
-        var navHeight = 1;
-        if ($(window).scrollTop() > navHeight) {
+        headerFix();
+    });
+    $( window ).resize(function() {
+        headerFix();
+    });
+    headerFix();
+
+
+    function headerFix(){
+        var scroll=$(window).scrollTop();
+
+        var navHeight = $('header').outerHeight(true);
+
+        if (scroll > 4) {
             $('body#header-1 header .navbar').addClass('fixed');
             $('body#header-2 header').addClass('fixed');
+            $('body#header-2 main').css({'margin-top':navHeight+'px'});
+
         }
         else {
             $('body#header-1 header .navbar').removeClass('fixed');
             $('body#header-2 header').removeClass('fixed');
+            $('body#header-2 main').css({'margin-top':'0px'});
+
         }
-    });
+    }
 
 
     /* Card */

@@ -1,8 +1,14 @@
 body#header-2{
   header{
+    top: 0;
+    z-index: 3;
+    width: 100%;
     background: $white;
     &.fixed{
       position: fixed;
+      /*
+      top: 0;
+      position: sticky;
       z-index: 3;
       width: 100%;
       .top{
@@ -37,10 +43,11 @@ body#header-2{
           }
         }
       }
+      */
     }
     .top{
       @include transition(all ease 300ms);
-      padding: 25px 0px;
+      padding: 10px 0px;
       .col-clock{
         display: flex;
         align-items: center;
@@ -50,11 +57,11 @@ body#header-2{
         }
         @include sm{
           position: absolute;
-          top: 42px;
+          top: 30px;
         }
         @include esm{
           position: absolute;
-          top: 42px;
+          top: 30px;
         }
         .navbar-toggler{
           outline: 0;

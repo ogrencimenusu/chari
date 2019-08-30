@@ -1,3 +1,10 @@
+header {
+  .cart-null{
+    background: transparent;
+    border: 0;
+    padding-left: 0;
+  }
+}
 .page{
   padding: 70px 0px;
   .btn-primary{
@@ -685,7 +692,7 @@
         }
       }
       .img-slider{
-        border: 1px solid rgba($primary,.1);
+        border: 1px solid rgba($primary,1);
         display: flex;
         align-items: center;
         .slider-for{
@@ -736,17 +743,17 @@
       }
       .price{
         font-size: 30px;
-        color: $primary;
         font-weight: 600;
       }
       .stars{
         margin-top: 20px;
         i.star{
-          color: $orange;
+          color: $primary;
         }
         a{
           margin-left: 10px;
           font-weight: 500;
+          color: $secondary;
         }
       }
       .product-details{
@@ -901,7 +908,8 @@
         text-decoration: none;
         padding: 7px 8px;
         margin-bottom: 5px;
-        transition: all ease 300ms;
+        @include transition(all ease 300ms);
+
         color: $secondary ;
         @include border-radius(4px);
         &:nth-last-child(1){
