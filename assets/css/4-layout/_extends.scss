@@ -55,6 +55,17 @@ body#header-1{
                   padding-bottom: 10px;
                 }
               }
+              .custom-dropdown-menu{
+                @include lg{
+                  top: 64px;
+                  left: calc(50% - 100px) !important;
+                }
+                &:before{
+                  @include lg{
+                    display: unset;
+                  }
+                }
+              }
               &.active{
                 .nav-link{
                   color: $primary;
@@ -385,7 +396,8 @@ body#header-1{
                 }
                 @include esm{
                   margin-left: 0;
-                  width: 100% ;
+                  width: 100% !important;
+
                 }
               }
             }
