@@ -4,6 +4,31 @@ header {
     border: 0;
     padding-left: 0;
   }
+  .form-search{
+    input[type=text]{
+      border-radius: 0;
+      border-color: transparent;
+      border-bottom-color: $gray-600;
+      @include box-shadow(unset);
+
+      &:focus{
+        @include box-shadow(unset);
+        border-bottom-color: $primary;
+      }
+    }
+    .btn{
+      background: transparent !important;
+      color: $dark !important;
+      border: transparent !important;
+      @include box-shadow(unset !important);
+      &:focus{
+        outline: 0;
+      }
+      &:hover{
+        color: $primary !important;
+      }
+    }
+  }
 }
 .page{
   padding: 70px 0px;
@@ -20,12 +45,23 @@ header {
     .breadcrumb-title{
       padding: 20px 15px;
       margin-bottom: 0;
+      @include esm{
+        font-size: 20px;
+        padding: 0px 10px;
+        padding-top: 21px;
+      }
     }
     .breadcrumb{
       background: transparent;
 
       .breadcrumb-item{
+        @include esm{
+          font-size: 14px;
+        }
         a{
+          @include esm{
+            font-size: 14px;
+          }
           text-decoration: none;
           color: rgba($white,1);
           &:hover{
@@ -200,12 +236,13 @@ header {
                 text-align: center;
                 i{
                   &:before{
-                    font-size: 30px;
+                    font-size: 20px;
                     margin: 0;
                   }
                 }
                 span{
-
+                  font-weight: 600;
+                  font-size: 14px;
                 }
               }
             }
@@ -224,7 +261,6 @@ header {
             @include esm{
               border-bottom: 1px solid $gray-400;
               padding: 5px 15px;
-              text-align: center;
             }
             .detail-info{
               display: flex;
@@ -268,6 +304,9 @@ header {
               color: $white;
               @include box-shadow(unset);
               background: $secondary;
+              font-size: 13px;
+              padding: 5px 10px;
+              margin-top: 9px;
               &:hover{
                 background: $primary;
                 color: $white;
@@ -289,6 +328,8 @@ header {
             text-decoration: none;
             @include esm{
               float: left;
+              font-size: 13px;
+              margin-bottom: 13px;
             }
             &:hover{
               color: $secondary;
@@ -300,9 +341,8 @@ header {
             background: $gray-200;
             color: $secondary;
             @include border-radius(100px);
-            padding: 7px 20px;
-            font-size: 12px;
-            font-weight: bold;
+            padding: 3px 10px;
+            font-size: 11px;
           }
         }
       }
@@ -798,6 +838,9 @@ header {
           border: 1px solid $gray-600;
           color: rgba($gray-600,1);
           @include box-shadow(unset);
+          @include esm{
+            margin-bottom: 15px;
+          }
           &:hover{
             background: rgba($gray-600,1);
             color: $white;
